@@ -1,8 +1,19 @@
 {
-    "perfil": {
-      "nombre": "Juan",
-      "apellido": "Perez"
+    "perfil-1": {
+      "nombre": "Sebastian",
+      "apellido": "Galvan",
+      "usuario": "usuario1",
+      "password" : "1234"
+
     },
+
+    "perfil-2": {
+        "nombre": "Ana",
+        "apellido": "Diaz",
+        "usuario": "usuario2",
+        "password" : "5678"
+  
+      },
   
     "movimientos": [
       {
