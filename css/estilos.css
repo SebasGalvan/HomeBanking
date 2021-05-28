@@ -4,8 +4,187 @@
 .hex-3 { color: #F2E205; }
 .hex-4 { color: #F2EEB3; }
 .hex-5 { color: #F2D64B; }
+.color-principal { color: #FFC700;}
 
 
 body{
-    background: #979DA6;
+    background: whitesmoke;
+    font-family: 'Raleway', sans-serif;
 }
+
+
+nav{
+    background: #FFC700;
+    display: flex;
+    justify-content: center;
+
+}
+
+nav li{
+    list-style: none;
+     display: inline-flex;
+     margin-left: 1em;
+     margin-right: 1em;
+    
+}
+
+nav li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    
+}
+
+.nav__li-item:hover{
+    color: whitesmoke;
+}
+
+
+footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    background: #333;
+    width: 99%;
+    text-align: justify;
+    padding-left: 1em;
+    padding-right: 1em; 
+    font-size: 9px;
+  }
+
+  footer p {
+        margin: 3px;
+        color: whitesmoke;
+  }
+
+
+  #login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border: #F2D64B solid 2px;
+    background: conic-gradient(#FFC700, #F2D64B); 
+    border-radius: 20px;
+    width: 500px;
+    height: 360px;
+    margin-top: 100px;
+    margin-left: 100px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  #contenedor{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  form > div > label {
+      width: 100px;
+  }
+
+#form__input-usuario{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+   
+  }
+#form__input-contraseña{
+    margin-top: 30px;
+  }
+#label__usuario{
+    color: black;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.input-icono {
+    background-image: url('../iconos/coolicon.png');
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    background-size: 12px;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    padding-left: 28px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .input-icono input {
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    color: black;
+  }
+  .input-icono input:focus {
+    outline: none;
+  }
+
+
+  #contenedor-imagen{
+    margin-top: 100px;
+    margin-left: 80px;
+  }
+
+  #contenedor-imagen img {
+      width: 550px;
+      height: 350px;
+  }
+
+  #main{
+      display: flex;
+      flex-direction: row;
+  }
+
+  #links_opciones_usuario{
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      font-size: 11px;
+      width: 310px;
+  }
+  .link{
+      text-decoration: none;
+      color: black;
+      margin-left: 20px;
+  }
+.link:hover {
+      color:#333;
+      text-decoration: underline #979DA6 solid;
+}
+
+#contenedor__problemas-usuario{
+        margin-top: 30px;
+        display: inline-flex;
+        justify-content: space-between;
+  }
+
+#form__boton-enviar{
+      margin-top: 13px;
+      display: flex;
+      flex-direction: row-reverse;
+}
+
+  #form__boton-enviar button{
+    background: #FFC700 ;
+    color: #333;
+    border-radius: 7px;
+    width: 120px;
+    height: 30px ;
+    border: whitesmoke solid 1px;
+    font-size: 13px;
+}
+#form__boton-enviar button:hover{
+    background-color: #F2D64B;
+    color: black;
+}
+
+  .link__nuevo-usuario{
+    display: flex;
+    justify-content: center;
+  }
