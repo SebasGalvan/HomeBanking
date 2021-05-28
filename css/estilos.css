@@ -1,0 +1,11 @@
+/* Color Theme Swatches in Hex */
+.hex-1 { color: #68788C; }
+.hex-2 { color: #979DA6; }
+.hex-3 { color: #F2E205; }
+.hex-4 { color: #F2EEB3; }
+.hex-5 { color: #F2D64B; }
+
+
+body{
+    background: #979DA6;
+}
