@@ -65,7 +65,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+
     border: #F2D64B solid 2px;
     background: conic-gradient(#FFC700, #F2D64B); 
     border-radius: 20px;
@@ -82,10 +82,6 @@ footer {
       justify-content: center;
   }
 
-  form > div > label {
-      width: 100px;
-  }
-
 #form__input-usuario{
     display: flex;
     flex-direction: column;
@@ -94,6 +90,7 @@ footer {
   }
 #form__input-contraseña{
     margin-top: 30px;
+  
   }
 #label__usuario{
     color: black;
@@ -123,6 +120,7 @@ footer {
   }
   .input-icono input:focus {
     outline: none;
+    background-color: transparent;
   }
 
 
@@ -136,33 +134,43 @@ footer {
       height: 350px;
   }
 
-  #main{
+#main{
       display: flex;
       flex-direction: row;
-  }
+}
 
-  #links_opciones_usuario{
+#links_opciones_usuario{
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      flex-wrap: wrap;
       margin-top: 40px;
       font-size: 11px;
-      width: 310px;
-  }
-  .link{
+      width: 300px;
+}
+
+.link{
       text-decoration: none;
       color: black;
-      margin-left: 20px;
-  }
-.link:hover {
-      color:#333;
-      text-decoration: underline #979DA6 solid;
+
 }
+
+.link:hover{
+    background-color: white;
+    border-radius: 5px;
+    color: #333;
+    border: #FFC700 solid 1px;
+    padding: 2px;
+}
+
 
 #contenedor__problemas-usuario{
         margin-top: 30px;
-        display: inline-flex;
+        display: flex;
         justify-content: space-between;
-  }
+        width: 300px;
+}
+
 
 #form__boton-enviar{
       margin-top: 13px;
@@ -170,7 +178,7 @@ footer {
       flex-direction: row-reverse;
 }
 
-  #form__boton-enviar button{
+#form__boton-enviar button{
     background: #FFC700 ;
     color: #333;
     border-radius: 7px;
@@ -179,12 +187,26 @@ footer {
     border: whitesmoke solid 1px;
     font-size: 13px;
 }
+
 #form__boton-enviar button:hover{
     background-color: #F2D64B;
     color: black;
 }
 
-  .link__nuevo-usuario{
+.link__nuevo-usuario{
     display: flex;
     justify-content: center;
-  }
+}
+.redes{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.redes__logos img{
+      width: 20px;
+      height: 20px;
+      margin-left: 3px;
+
+}
+
