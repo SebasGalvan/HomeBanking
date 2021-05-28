@@ -1,0 +1,10 @@
+{
+    "name":"Sebastian",
+    "apelldo":"Galvan",
+    "dni":"12121212",
+    "domicilio":{
+        "calle": "Buenos Aires",
+        "numero": 1245
+    },
+    "telefono":352118457953
+}
