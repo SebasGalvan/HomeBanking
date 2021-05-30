@@ -59,7 +59,11 @@ footer {
         margin: 3px;
         color: whitesmoke;
   }
-
+  h1{
+    font-family: 'Squada One', cursive;
+    color: #333;
+    font-size: 35px;
+  }
 
   #login{
     display: flex;
@@ -82,20 +86,56 @@ footer {
       justify-content: center;
   }
 
-#form__input-usuario{
+#form__input-usuario,.form__input-contraseña{
     display: flex;
     flex-direction: column;
     margin-top: 40px;
    
   }
-#form__input-contraseña{
-    margin-top: 30px;
-  
-  }
-#label__usuario{
+
+#label__usuario, .label__password{
     color: black;
     font-size: 12px;
     padding-left: 15px;
+}
+
+
+#etiquetas__usuario{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#error_usuario{
+  color: darkred;
+  font-size: 12px;
+}
+
+.input__icono-contraseña{
+  background-image: url('../iconos/lock.png');
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 12px;
+  display: flex;
+  align-items: center;
+  
+  width: 280px;
+  padding-left: 28px;
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.input__icono-contraseña input {
+  font-size: 15px;
+  border: none;
+  width: 250px;
+  background-color: transparent;
+  color: black;
+}
+.input__icono-contraseña input:focus {
+  outline: none;
+  background-color: transparent;
 }
 
 .input-icono {
@@ -108,12 +148,13 @@ footer {
     width: 280px;
     padding-left: 28px;
     height: 30px;
-    border: 1px solid black;
+    border: 1px solid #333;
     border-radius: 10px;
     margin-top: 10px;
   }
   .input-icono input {
     font-size: 15px;
+    width: 250px;
     border: none;
     background-color: transparent;
     color: black;
@@ -152,17 +193,16 @@ footer {
 .link{
       text-decoration: none;
       color: black;
+      padding: 2px;
+      border-radius: 5px;
 
 }
 
 .link:hover{
     background-color: white;
-    border-radius: 5px;
     color: #333;
-    border: #FFC700 solid 1px;
-    padding: 2px;
+    
 }
-
 
 #contenedor__problemas-usuario{
         margin-top: 30px;
@@ -171,6 +211,24 @@ footer {
         width: 300px;
 }
 
+#form__boton-password {
+    margin-top: 13px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#form__boton-password > button{
+  background: #FFC700 ;
+  color: #333;
+  border-radius: 7px;
+  width: 120px;
+  height: 30px ;
+  border: whitesmoke solid 1px;
+  font-size: 13px;
+}
+#form__boton-password > button:hover{
+  background-color: #F2D64B;
+  color: black;
+}
 
 #form__boton-enviar{
       margin-top: 13px;
@@ -197,6 +255,9 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+
+
 .redes{
     display: flex;
     align-items: center;
@@ -210,3 +271,39 @@ footer {
 
 }
 
+
+.div__bienvenida{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.nombre__usuario-form{
+  font-weight: bold;
+  color: black;
+}
+
+.div__etiquetas-password{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.label__password-error{
+  color: darkred;
+  font-size: 12px;
+}
+
+#logo_usuario_correcto{
+  background-image: url('../iconos/check_circle.png');
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 12px;
+}
+
+#logo_error_password{
+  background-image: url('../iconos/disabled_by_default.png');
+  background-repeat: no-repeat;
+  background-position: 4px center;
+  background-size: 12px;
+}

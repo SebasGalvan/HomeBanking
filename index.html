@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="shortcut icon" href="iconos/coolicon-principal.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,700;0,900;1,200&display=swap" 
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
 
     <title>BNR.com</title>
 </head>
@@ -29,12 +32,13 @@
                     <h1>Banco Nuevo Rosario</h1>
                     <form action="" id="formulario__login">
                         <div id="form__input-usuario">
-                            <label for="" id="label__usuario">Usuario</label>
+                            <div id="etiquetas__usuario">
+                                <label for="" id="label__usuario">Usuario</label>
+                                <div hidden = true id="error_usuario">Usuario Incorrecto</div>
+                            </div>
                             <div class="input-icono">
                                 <input type="text" name="input" placeholder="Usuario" id="inputUsuario">
                             </div>
-                            <i></i>
-                            <i></i>
                         </div>
                         <div id="form__boton-enviar">
                             <button type="submit" id="btnUsuario">Enviar</button>
@@ -74,5 +78,6 @@
     </footer>
 
     <script src="js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>
