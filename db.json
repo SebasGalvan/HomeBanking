@@ -1,20 +1,11 @@
 {
-    
-    "usuarios":[
-
-      {
+  "usuarios":[
+    {
       "nombre": "Sebastian",
       "apellido": "Galvan",
       "usuario": "usuario1",
       "password" : "1234"
-      },
-      {
-        "nombre": "Ana",
-        "apellido": "Luna",
-        "usuario": "usuario2",
-        "password" : "1234"
-      }
-  
+    }
     ],
     
     "movimientos": [
