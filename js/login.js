@@ -114,8 +114,9 @@ class Usuario{
         
 function consultarUsuario(e){
     e.preventDefault();
+
+    let usuario;
     axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/usuarios', {
-    
         params: {
             usuario: inputUsuario.value
           }
@@ -153,7 +154,7 @@ function validarPassword(e){
     e.preventDefault();
 
     const campoPassword = document.querySelector('.inputPassword');
-
+    let usuario;
     axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/usuarios', {
     
         params: {
@@ -188,5 +189,4 @@ function validarPassword(e){
         
       })
 }
-
 const ui = new UILogin();
