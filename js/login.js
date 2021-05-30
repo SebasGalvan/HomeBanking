@@ -189,4 +189,4 @@ function validarPassword(e){
       })
 }
 
-ui = new UILogin();
+const ui = new UILogin();
