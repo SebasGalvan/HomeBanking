@@ -1,29 +1,23 @@
 // url home https://my-json-server.typicode.com/SebasGalvan/HomeBanking/db
-
 const formularioLogin = document.querySelector('#formulario__login')
-const btnSubmitUsuario = document.querySelector('')
+const btnSubmitUsuario = document.querySelector('#btnUsuario')
+const inputUsuario = document.querySelector('#inputUsuario')
 
+
+login = new Login();
+UI = new UI();
+API = new miAPI();
 
 
 eventListeners();
 function eventListeners() {
+
+    btnSubmitUsuario.addEventListener('submit', login.consultarUsuario)
+
     document.addEventListener('DOMContentLoaded',()=>{
-       
+        
     })
 }
-
-
-
-// fetch('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/db')
-// .then(function(response) {
-//     return response.text();
-// })
-// .then(function(data) {
-//     console.log('data = ', data);
-// })
-// .catch(function(err) {
-//     console.error(err);
-// });
 
 class UILogin{
 
@@ -99,8 +93,34 @@ class Usuario{
     toString(){
         return  `Usuario: ${this.nombre} ${this.apellido}`;
     }
+}
 
 
+
+class Login{
+
+        
+        consultarUsuario(){
+
+                fetch('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/usuarios')
+                    .then(function(response) {
+                    return response.text();
+                })
+                .then(function(data) {
+                    if(data.nombre = inputUsuario.value){
+                    console.log('data = ', data);
+                    return data;}
+                    else{
+                        return "Error usuario no encontrado"
+                    }
+                })
+                .catch(function(err) {
+                    console.error(err);
+                });
+                
+        }
+
+    
 
 
 }
