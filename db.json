@@ -6,14 +6,6 @@
       "password" : "1234"
 
     },
-
-    "perfil-2": {
-        "nombre": "Ana",
-        "apellido": "Diaz",
-        "usuario": "usuario2",
-        "password" : "5678"
-  
-      },
   
     "movimientos": [
       {
