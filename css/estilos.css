@@ -5,7 +5,7 @@
 .hex-4 { color: #F2EEB3; }
 .hex-5 { color: #F2D64B; }
 .color-principal { color: #FFC700;}
-
+/*___________________________________________________________________*/
 
 body{
     background: whitesmoke;
@@ -274,7 +274,8 @@ footer {
 
 .div__bienvenida{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 30px;
 }
 
@@ -287,6 +288,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .label__password-error{
@@ -294,16 +296,16 @@ footer {
   font-size: 12px;
 }
 
-#logo_usuario_correcto{
-  background-image: url('../iconos/check_circle.png');
-  background-repeat: no-repeat;
-  background-position: 4px center;
-  background-size: 12px;
+#img_usuario_correcto{
+ margin-right: 5px;
 }
 
-#logo_error_password{
-  background-image: url('../iconos/disabled_by_default.png');
-  background-repeat: no-repeat;
-  background-position: 4px center;
-  background-size: 12px;
+#img_error_password{
+  margin-left: 5px;
+  height: 13px;
+}
+
+.conteneder_mensaje_error{
+  display: flex;
+  flex-direction: row-reverse;
 }

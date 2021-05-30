@@ -22,21 +22,22 @@ class UILogin{
         const divBienvenida =  document.createElement('div');
         divBienvenida.classList = 'div__bienvenida'
 
-        const logo_usuario_correcto =  document.createElement('div');
-        logo_usuario_correcto.id = 'logo_usuario_correcto';
+        //______________________________________________________________________________________
+        const img_usuario_correcto =  document.createElement('img');
+        img_usuario_correcto.src ="iconos/check_circle.png"
+        img_usuario_correcto.id = 'img_usuario_correcto';
 
         const usuario = document.createElement('div');
         usuario.className = 'nombre__usuario-form'
-        usuario.textContent = `Bienvenido: ${inputUsuario.value}`
-
+        usuario.textContent = `${inputUsuario.value}`
 
         divBienvenida.appendChild(usuario);
-        divBienvenida.appendChild(logo_usuario_correcto);
+        divBienvenida.appendChild(img_usuario_correcto);
 
         const divContenedor = document.createElement('div');
-        divContenedor.id = "form__input-contraseña"
+        divContenedor.id = "form__input-contraseña";
 
-
+        // ____________________________________________________________________________________
         const divEtiquetas =  document.createElement('div');
         divEtiquetas.className = "div__etiquetas-password"
 
@@ -44,18 +45,27 @@ class UILogin{
         etiqueta.className = 'label__password'
         etiqueta.textContent = 'Contraseña: ';
 
-        const logo_error_password =  document.createElement('div');
-        logo_error_password.id = 'logo_error_password';
+
+        const contenedor_mensaje_error = document.createElement('div');
+        contenedor_mensaje_error.className = "conteneder_mensaje_error" 
 
         const etiquetaError = document.createElement('label')
         etiquetaError.className = 'label__password-error'
-        etiquetaError.hidden= true
-        etiquetaError.textContent = '(*) Contraseña Incorrecta';
+        etiquetaError.hidden = true;
+        etiquetaError.textContent = 'Contraseña Incorrecta';
+
+        const img_error_password =  document.createElement('img');
+        img_error_password.src= "iconos/disabled_by_default.png"
+        img_error_password.hidden= true;
+        img_error_password.id = 'img_error_password';
+
+        contenedor_mensaje_error.appendChild(etiquetaError)
+        contenedor_mensaje_error.appendChild(img_error_password)
 
         divEtiquetas.appendChild(etiqueta);
-        divEtiquetas.appendChild(logo_error_password);
-        divEtiquetas.appendChild(etiquetaError);
+        divEtiquetas.appendChild(contenedor_mensaje_error);
 
+        // ____________________________________________________________________
         const divIcono =  document.createElement('div');
         divIcono.className = 'input__icono-contraseña';
 
@@ -172,10 +182,13 @@ function validarPassword(e){
         else{
 
             const etiquetaError= document.querySelector('.label__password-error');
+            const imagenError= document.querySelector('#img_error_password');
             etiquetaError.hidden =  false;
+            imagenError.hidden =  false;
             
             setTimeout(() => {
                 etiquetaError.hidden =  true;
+                imagenError.hidden =  true;
             }, 5000);
             
 
