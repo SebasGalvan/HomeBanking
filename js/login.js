@@ -8,10 +8,6 @@ eventListeners();
 function eventListeners() {
 
     btnSubmitUsuario.addEventListener('click', consultarUsuario);
-
-    document.addEventListener('DOMContentLoaded',()=>{
-        
-    })
 }
 class UILogin{
 
@@ -177,7 +173,7 @@ function validarPassword(e){
         if(usuario.length){
         console.log(usuario);
         guardarUsuarioSession(usuario[0]);
-        location.replace('paginas/resumen.html');
+        location.replace('paginas/home.html');
         }
         else{
 
