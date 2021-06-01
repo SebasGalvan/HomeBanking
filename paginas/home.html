@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/home.css">
     <title>Home</title>
 </head>
 <body>
@@ -18,13 +18,15 @@
                 <li>Transeferencia</li>
                 <li>Ayuda</li>
             </ul>
-            <div>
+            <div id="contenedor__info-user">
                 <div class="datos__usuario">
-                    <p id="nombre__usuario"></p>
-                    <p id="tarjeta__usuario"></p>
-                    <p id="saldo__usuario"></p>
+                    <p id="nombre__usuario">Sebastian Galvan</p>
+                    <p id="tarjeta__usuario">123145642156</p>
+                    <p id="saldo__usuario">$ 121231</p>
                 </div>
-                <img src="/iconos/coolicon-principal.png" alt="">
+                <div id="imagen__nav"> 
+                    <a href=""><img src="../iconos/coolicon-principal.png" alt="" id="imagen__cerrarSession"></a>
+                </div>
             </div>
         </nav>
         
@@ -42,10 +44,15 @@
                     <p id="estado"></p>
                 </div>
             </div>
-            <img src="../img/undraw_online_payments_luau.png" alt="Imagen usuario">
+            <img src="../img/undraw_online_payments_luau.png" alt="Imagen usuario" id="imagen__contenido">
         </div>
 
+        <footer>
+            <p>Footer </p>
+        </footer>
     </div>
+
+   
     
 </body>
 </html>

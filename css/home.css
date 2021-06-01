@@ -1,0 +1,102 @@
+/* Color Theme Swatches in Hex */
+.hex-1 { color: #68788C; }
+.hex-2 { color: #979DA6; }
+.hex-3 { color: #F2E205; }
+.hex-4 { color: #F2EEB3; }
+.hex-5 { color: #F2D64B; }
+.color-principal { color: #FFC700;}
+/*___________________________________________________________________*/
+
+body{
+    background-color: #FFC700;
+    display: flex;
+    justify-content: center;
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #979DA6;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 2em;
+    margin-right: 2em;
+    width: max-content;
+    height: max-content;
+}
+nav ul li:hover{
+    background-color: #F2EEB3;
+}
+
+nav #contenedor__info-user{
+    
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+
+}
+
+#imagen__nav{
+    display: flex;
+    align-items: center;
+    
+}
+
+.datos__usuario{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.datos__usuario p{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#imagen__cerrarSession{}
+
+
+#contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    height: 590px;
+}
+
+#contenido #infoPersonal{
+    width: 40%;
+}
+
+#imagen__contenido{
+    max-width: 650px;
+    max-height: 500px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2px;
+    position: fixed;
+    bottom: 0;
+    background: #333;
+    width: 90%;
+    text-align: justify;
+    font-size: 9px;
+}
