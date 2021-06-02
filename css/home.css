@@ -30,13 +30,22 @@ nav{
 nav ul{
     display: flex;
     flex-direction: row;
+   
 }
 nav ul li{
+    display: flex;
     list-style: none;
     margin-left: 2em;
     margin-right: 2em;
     width: max-content;
     height: max-content;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li img{
+    width: 20px;
+    height: 20px;
+    margin-right: 2px;
 }
 nav ul li:hover{
     background-color: #F2EEB3;
