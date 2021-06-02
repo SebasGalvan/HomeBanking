@@ -194,8 +194,8 @@ function validarPassword(e){
       .catch(function (error) {
         console.log(error);
       })
-      .then(function () {
+    //   .then(function () {
         
-      })
+    //   })
 }
 const ui = new UILogin();

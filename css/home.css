@@ -42,7 +42,7 @@ nav ul li{
     align-items: center;
     justify-content: center;
 }
-nav ul li img{
+nav ul li a img{
     width: 20px;
     height: 20px;
     margin-right: 2px;

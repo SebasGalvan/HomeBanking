@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/resumen.css">
     <title>Document</title>
 </head>
 <body> 
@@ -30,14 +32,24 @@
         </nav>
 
 
-        <div id="contenido">
+        <div id="contenido_tabla">
             <div id="filtros">
-
+                <form action="">
+                    <label>Aplicar Filtro</label>
+                    <input type="text" placeholder="Filtrar por titulo">
+                    <button>Buscar</button>
+                </form>
+                <div hidden=true><img src="../iconos/disabled_by_default.png" alt="Imagen Borrar Filtro">Cancelar Filtro</div>
             </div>
 
             <div id="tabla">
                  <table id="tabla__resumen">
-
+                     <tr>
+                        <th>Id | </th>
+                        <th>Fecha | <img src="" alt=""></th>
+                        <th>Titulo | </th>
+                        <th>Detalle |</th>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -48,6 +60,9 @@
 
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/resumen.js"></script>
+    
+
 </body>
 </html>

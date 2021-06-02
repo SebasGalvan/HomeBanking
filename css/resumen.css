@@ -1,0 +1,11 @@
+#contenido_tabla{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    height: 590px;
+}
+
+#filtros{
+    display: flex;
+    flex-direction: row;
+}
