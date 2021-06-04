@@ -36,65 +36,6 @@
           "saldo":"21000"
         }
       ],
-
-    "movimientos": [
-      {
-        "id": 1,
-        "fecha": "20/05/2021",
-        "titulo": "Deb. Autom. De Serv.",
-        "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-        "debito": "100,00", 
-        "credito": "0,00", 
-        "saldo parcial": "1000,00"
-      },
-      {
-        "id": 2,
-        "fecha": "17/05/2021",
-        "titulo": "Transferencia A Terceros",
-        "descripcion": "Cbu 1500021302337165742752 Cu 22334534143 Rbts 4517xxxxxxxxxx06 Varios",
-        "debito": "300,00", 
-        "credito": "0,00", 
-        "saldo parcial": "700,00"
-      },
-      {
-        "id": 2,
-        "fecha": "17/05/2021",
-        "titulo": "Transferencia De Cuenta Propia",
-        "descripcion": "Cuenta Origen Caja Ahorro Pesos Varios 4517xxxxxxxxxx45 4444448769",
-        "debito": "0", 
-        "credito": "1.000,00", 
-        "saldo parcial": "1700,00"
-      }],
-
-      "datos-accesos": [
-        {
-          "id": 1,
-          "fecha": "20/05/2021",
-          "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
-        },
-        {
-          "id": 2,
-          "fecha": "17/05/2021",
-          "titulo": "Transferencia A Terceros",
-          "descripcion": "Cbu 1500021302337165742752 Cu 22334534143 Rbts 4517xxxxxxxxxx06 Varios",
-          "debito": "300,00", 
-          "credito": "0,00", 
-          "saldo parcial": "700,00"
-        },
-        {
-          "id": 2,
-          "fecha": "17/05/2021",
-          "titulo": "Transferencia De Cuenta Propia",
-          "descripcion": "Cuenta Origen Caja Ahorro Pesos Varios 4517xxxxxxxxxx45 4444448769",
-          "debito": "0", 
-          "credito": "1.000,00", 
-          "saldo parcial": "1700,00"
-        }
-    ],
     "transferencias": [
         {
           "id": 1,
@@ -330,9 +271,6 @@
           "credito": "0,00", 
           "saldo parcial": "1000,00"
         }
-        
-        
-
     ]
     
   }
