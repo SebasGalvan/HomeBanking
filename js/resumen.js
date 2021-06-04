@@ -6,10 +6,10 @@ class UIResumen{
 
 
 
-  llenarTabla(){
+  llenarTabla(lista){
 
     const tabla =  document.querySelector("#tabla__resumen")
-    transferenciasLista.forEach(t => {
+    lista.forEach(t => {
         const row =  document.createElement("tr");
 
         const imagen =  document.createElement('img');
@@ -36,9 +36,12 @@ class UIResumen{
 
   }
 
-  sincronizarLista(){
-    sessionStorage.setItem('transferencias', JSON.stringify(transferenciasLista));
+  sincronizarLista(lista){
+    sessionStorage.setItem('transferencias', JSON.stringify(lista));
   } 
+
+
+  limpiarTabla(){}
 }
 
 
@@ -46,21 +49,67 @@ UI = new UIResumen();
 
 inicio();
 function inicio() { 
+
+    eventListeners();
+
+
     let transferencias;
     axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/transferencias', {
               })
               .then(function (response) {
                 transferencias =  response.data;
                 console.log(transferencias);
+                transferencias.forEach(t => {
+                    t.fecha = convertirStringADate(t.fecha)  
+                });
                 transferenciasLista = transferencias.slice();
-                UI.llenarTabla();
-                UI.sincronizarLista();
+                UI.llenarTabla(transferenciasLista);
+                UI.sincronizarLista(transferenciasLista);
                 
               })
               .catch(function (error) {
                 console.log(error);
               })
   
+}
+
+
+function eventListeners(){
+
+  const ordenar = document.querySelector('#ordenar');
+
+  ordenar.addEventListener('click', ordenarPorFechaAsc);
+
+
+}
+
+
+function convertirStringADate(fechaObj){
+  var nueva=fechaObj.split('/');
+  dd = nueva[0];
+  mm = nueva[1]-1;
+  yyyy = nueva[2];
+  let fecha = new Date(yyyy,mm,dd).toLocaleDateString();
+  return fecha;
+}
+
+
+function ordenarPorFechaAsc(){
+
+  listaAsc = transferenciasLista.sort(function (a, b) {
+      if (a.fecha > b.fecha) {
+        return 1;
+      }
+      if (a.fecha < b.fecha) {
+        return -1;
+      }
+      return 0;
+    });
+
+    limpiarTabla();
+    UI.llenarTabla(listaAsc)
+
+
 }
 
 
