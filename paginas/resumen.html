@@ -13,12 +13,11 @@
     <div id="contenedor">
         <nav>
             <ul>
-                <li><img src="../iconos/home.png" alt="Logo Home">Home</li>
-                <li>Resumen</li>
-                <li>Tarjetas</li>
-                <li>Transeferencia</li>
-                <li>Ayuda</li>
-                <li id="ordenar">Oredenar</li>
+                <li><a href="../paginas/home.html"><img src="../iconos/home.png" alt="Logo Home">Home</a></li>
+                <li><a href="../paginas/resumen.html"><img src="../iconos/home.png" alt="Logo Home">Resumen</a></li>
+                <li><a href="../paginas/tarjetas.html"><img src="../iconos/home.png" alt="Logo Home">Tarjetas</a></li>
+                <li><a href="../paginas/transferencia.html"><img src="../iconos/home.png" alt="Logo Home">Transeferencias</a></li>
+                <li><a href="../paginas/help.html"><img src="../iconos/home.png" alt="Logo Home">Ayuda</a></li>
             </ul>
             <div id="contenedor__info-user">
                 <div class="datos__usuario">
@@ -27,7 +26,7 @@
                     <p id="saldo__usuario">$ 121231</p>
                 </div>
                 <div id="imagen__nav"> 
-                    <a href=""><img src="../iconos/coolicon-principal.png" alt="" id="imagen__cerrarSession"></a>
+                    <div id="cerrarSession"><img id="imagen_cerrar_sesion" src="../iconos/power_settings_new.png"></div>
                 </div>
             </div>
         </nav>
@@ -38,20 +37,15 @@
                 <form action="">
                     <label>Aplicar Filtro</label>
                     <input type="text" placeholder="Filtrar por titulo">
-                    <button>Buscar</button>
+                    <button id="boton__buscar">Buscar</button>
                 </form>
-                <div hidden=true><img src="../iconos/disabled_by_default.png" alt="Imagen Borrar Filtro">Cancelar Filtro</div>
+                <a href="#" id="cancelar_filtro" hidden=true><img src="../iconos/disabled_by_default.png" alt="Imagen Borrar Filtro">Cancelar Filtro</a>
             </div>
 
             <div id="tabla">
                  <table id="tabla__resumen">
-                     <tr>
-                        <th>Id | </th>
-                        <th>Fecha | <img src="" alt=""></th>
-                        <th>Titulo | </th>
-                        <th>Detalle |</th>
-                    </tr>
                 </table>
+                <p id="mostrar_mas">Mostrar mas</p>
             </div>
         </div>
 
@@ -63,6 +57,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/resumen.js"></script>
+    <script src="../js/logout.js"></script>
     
 
 </body>
