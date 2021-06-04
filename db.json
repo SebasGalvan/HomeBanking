@@ -115,14 +115,224 @@
           "saldo parcial": "700,00"
         },
         {
-          "id": 2,
-          "fecha": "17/05/2021",
+          "id": 3,
+          "fecha": "20/06/2016",
           "titulo": "Transferencia De Cuenta Propia",
           "descripcion": "Cuenta Origen Caja Ahorro Pesos Varios 4517xxxxxxxxxx45 4444448769",
           "debito": "0", 
           "credito": "1.000,00", 
           "saldo parcial": "1700,00"
+        },
+        {
+          "id": 4,
+          "fecha": "12/11/2016",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 5,
+          "fecha": "17/04/2016",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 6,
+          "fecha": "189/03/2017",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 7,
+          "fecha": "14/07/2012",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 8,
+          "fecha": "18/04/2019",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 9,
+          "fecha": "17/03/2017",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 10,
+          "fecha": "12/05/2020",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 11,
+          "fecha": "03/02/2019",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 12,
+          "fecha": "04/08/2018",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 13,
+          "fecha": "09/06/2012",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 14,
+          "fecha": "07/03/2015",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 15,
+          "fecha": "12/11/2015",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 16,
+          "fecha": "28/10/2016",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 17,
+          "fecha": "09/04/2016",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 18,
+          "fecha": "16/11/2018",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 19,
+          "fecha": "14/01/2013",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 20,
+          "fecha": "24/10/2020",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 21,
+          "fecha": "31/05/2019",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 22,
+          "fecha": "08/07/2013",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 23,
+          "fecha": "29/03/2015",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 24,
+          "fecha": "19/08/2018",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 25,
+          "fecha": "12/07/2014",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
+        },
+        {
+          "id": 20,
+          "fecha": "02/12/2016",
+          "titulo": "Deb. Autom. De Serv.",
+          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "debito": "100,00", 
+          "credito": "0,00", 
+          "saldo parcial": "1000,00"
         }
+        
+        
+
     ]
     
   }
