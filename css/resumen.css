@@ -1,11 +1,82 @@
+/* Color Theme Swatches in Hex */
+.hex-1 { color: #68788C; }
+.hex-2 { color: #979DA6; }
+.hex-3 { color: #F2E205; }
+.hex-4 { color: #F2EEB3; }
+.hex-5 { color: #F2D64B; }
+.color-principal { color: #FFC700;}
+/*___________________________________________________________________*/
+
 #contenido_tabla{
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
-    height: 590px;
+
+}
+nav{
+    background-color: #333;
+}
+nav ul li a {
+    
+    color: #FFC700;
+    text-decoration: none;
+}
+nav ul li{
+    list-style: none;
+}
+
+#contenedor__info-user{
+    color: #FFC700;
 }
 
 #filtros{
     display: flex;
     flex-direction: row;
+}
+
+#tabla{
+    margin-left: 5em;
+    margin-bottom: 5em;
+}
+table{
+    border: #68788C solid 2px;
+    margin-top: 2em;
+}
+table tr:hover{
+    background-color: #979DA6;
+}
+table tr th {
+    background-color: #68788C;
+    color: #FFC700;
+    width: 200px;
+}
+
+#indice, #detalle{
+    background-color: #68788C;
+    color: #FFC700;
+    width: 50px;
+}
+
+#filtros{
+    margin-top: 1em;
+    margin-left: 5em;
+}
+
+#ordenar{
+    cursor: pointer;
+    margin-left: 2em;
+    width: 18px;
+    height: 18px;
+}
+
+#imagen_ver_detalle:hover{
+    cursor: pointer;
+}
+
+#mostrar_mas:hover{
+    cursor: pointer;
+}
+
+#imagen_cerrar_sesion:hover{
+    cursor: pointer;
 }

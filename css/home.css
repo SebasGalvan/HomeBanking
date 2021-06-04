@@ -47,9 +47,6 @@ nav ul li a img{
     height: 20px;
     margin-right: 2px;
 }
-nav ul li:hover{
-    background-color: #F2EEB3;
-}
 
 nav #contenedor__info-user{
     
