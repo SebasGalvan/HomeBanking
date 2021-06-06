@@ -51,4 +51,6 @@ function agregarTransferencia(){
 function cerrarSesionTransferencia() {
   cerrarSesion();
 }
-// agregarTransferencia()
+
+
+inicio()
