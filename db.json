@@ -14,7 +14,9 @@
       "sexo" : "M",
       "nroHijos" : "No",
       "idCuentaBancaria":"006501581AFT21",
-      "estado":"Activo"
+      "estado":"Activo",
+      "saldo":190000,
+      "limite":30000
     }
   ],
     "tarjetas":[     
@@ -23,17 +25,14 @@
           "moneda":"ARS",
           "nroTarjeta":"5725265823543778",
           "fechaAfiliacion":"02/2018",
-          "fechaCaducidad":"06/2029",
-          "saldo":"190000"
-
+          "fechaCaducidad":"06/2029"
         },
         {
           "tipo":"Mastercard",
           "moneda":"ARS",
           "nroTarjeta":"5725265823543778",
           "fechaAfiliacion":"02/2021",
-          "fechaCaducidad":"07/2031",
-          "saldo":"21000"
+          "fechaCaducidad":"07/2031"
         }
       ],
     "transferencias": [

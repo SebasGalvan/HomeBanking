@@ -16,10 +16,24 @@
 nav{
     background-color: #333;
 }
+nav ul{
+    height: max-content;
+}
+
+nav ul li:hover{
+    color: #979DA6;
+}
 nav ul li a {
-    
+    display: flex;
+    align-items: center;
     color: #FFC700;
     text-decoration: none;
+}
+
+nav ul li a img {
+    width: 15px;
+    height: 15px;
+    padding-right: 0.5em;
 }
 nav ul li{
     list-style: none;
