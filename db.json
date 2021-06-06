@@ -1,18 +1,18 @@
 {
   "usuarios":[
     {
-      "nombre": "Sebastian",
-      "apellido": "Galvan",
+      "nombre": "Leonel",
+      "apellido": "Messi",
       "usuario": "usuario1",
       "password" : "1234",
-      "domicilioCalle" : "Buenos Aires",
+      "domicilioCalle" : "España",
       "domicilioNumero" : "4857",
-      "codigoPostal" : "2021",
-      "telefono" : "3400265481",
-      "email" : "sebaale@mailito.com",
-      "fechaNacimiento" : "29/05/2000",
+      "codigoPostal" : "43423",
+      "telefono" : "3419834893",
+      "email" : "messi@mailito.com",
+      "fechaNacimiento" : "10/10/1985",
       "sexo" : "M",
-      "nroHijos" : "No",
+      "nroHijos" : "3",
       "idCuentaBancaria":"006501581AFT21",
       "estado":"Activo",
       "saldo":190000,
@@ -30,7 +30,7 @@
         {
           "tipo":"Mastercard",
           "moneda":"ARS",
-          "nroTarjeta":"5725265823543778",
+          "nroTarjeta":"6523654587451231",
           "fechaAfiliacion":"02/2021",
           "fechaCaducidad":"07/2031"
         }
