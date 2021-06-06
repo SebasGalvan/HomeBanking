@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/resumen.css">
+    <link rel="stylesheet" href="../css/nav.css">
     <title>Document</title>
 </head>
 <body> 
@@ -21,9 +21,9 @@
             </ul>
             <div id="contenedor__info-user">
                 <div class="datos__usuario">
-                    <p id="nombre__usuario">Sebastian Galvan</p>
-                    <p id="tarjeta__usuario">123145642156</p>
-                    <p id="saldo__usuario">$ 121231</p>
+                    <p id="nombre__usuario"></p>
+                    <p id="idcuenta__usuario"></p>
+                    <p id="saldo__usuario"></p>
                 </div>
                 <div id="imagen__nav"> 
                     <div id="cerrarSession"><img id="imagen_cerrar_sesion" src="../iconos/power_settings_new.png"></div>
@@ -36,17 +36,24 @@
             <div id="filtros">
                 <form action="">
                     <label>Aplicar Filtro</label>
-                    <input type="text" placeholder="Filtrar por titulo">
+                    <input type="text" placeholder="Filtrar...">
                     <button id="boton__buscar">Buscar</button>
                 </form>
-                <a href="#" id="cancelar_filtro" hidden=true><img src="../iconos/disabled_by_default.png" alt="Imagen Borrar Filtro">Cancelar Filtro</a>
+                <div class="cancelar_filtro" >
+                    <img  hidden=true src="../iconos/disabled_by_default.png" alt="Imagen Borrar Filtro">
+                    <p hidden=true>Cancelar Filtro</p>
+                </div>
+                
+            </div>
+            <div id="seccionPrincipal">
+                <div id="tabla">
+                    <table id="tabla__resumen">
+                    </table>
+                    <p id="mostrar_mas">Mostrar mas</p>
+                </div>
+                <div id="mas__informacion"></div>
             </div>
 
-            <div id="tabla">
-                 <table id="tabla__resumen">
-                </table>
-                <p id="mostrar_mas">Mostrar mas</p>
-            </div>
         </div>
 
         <footer>
@@ -58,6 +65,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/resumen.js"></script>
     <script src="../js/logout.js"></script>
+    <script src="../js/completarCampos.js"></script>
     
 
 </body>

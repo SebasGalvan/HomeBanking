@@ -7,74 +7,12 @@
 .color-principal { color: #FFC700;}
 /*___________________________________________________________________*/
 
-body{
-    background-color: #FFC700;
-    display: flex;
-    justify-content: center;
-}
 
 #contenedor{
     display: flex;
     flex-direction: column;
-    width: 90%;
     background-color: #979DA6;
 }
-
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul{
-    display: flex;
-    flex-direction: row;
-   
-}
-nav ul li{
-    display: flex;
-    list-style: none;
-    margin-left: 2em;
-    margin-right: 2em;
-    width: max-content;
-    height: max-content;
-    align-items: center;
-    justify-content: center;
-}
-nav ul li a img{
-    width: 20px;
-    height: 20px;
-    margin-right: 2px;
-}
-
-nav #contenedor__info-user{
-    
-    display: flex;
-    flex-direction: row;
-    margin-right: 10px;
-
-}
-
-#imagen__nav{
-    display: flex;
-    align-items: center;
-    
-}
-
-.datos__usuario{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-}
-
-.datos__usuario p{
-    margin-left: 1em;
-    margin-right: 1em;
-}
-
-#imagen__cerrarSession{}
-
 
 #contenido{
     display: flex;
@@ -87,6 +25,8 @@ nav #contenedor__info-user{
 
 #contenido #infoPersonal{
     width: 40%;
+    padding: 0%;
+    margin: 0%;
 }
 
 #imagen__contenido{

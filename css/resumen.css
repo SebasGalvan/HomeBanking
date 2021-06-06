@@ -13,60 +13,51 @@
     background-color: whitesmoke;
 
 }
-nav{
-    background-color: #333;
-}
-nav ul{
-    height: max-content;
-}
 
-nav ul li:hover{
-    color: #979DA6;
-}
-nav ul li a {
+.cancelar_filtro{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    color: #FFC700;
-    text-decoration: none;
+    color: darkred;
+    cursor: pointer;
+    margin: 0%;
+    padding: 0%;
+    margin-left: 1em;
+    font-size: 1em;
 }
 
-nav ul li a img {
-    width: 15px;
-    height: 15px;
-    padding-right: 0.5em;
-}
-nav ul li{
-    list-style: none;
-}
-
-#contenedor__info-user{
-    color: #FFC700;
-}
 
 #filtros{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    margin:0%;
+    padding: 0%;
 }
 
 #tabla{
     margin-left: 5em;
     margin-bottom: 5em;
+    min-width: 50%;
 }
 table{
     border: #68788C solid 2px;
     margin-top: 2em;
 }
 table tr:hover{
-    background-color: #979DA6;
+    background-color: #F2EEB3;
 }
 table tr th {
-    background-color: #68788C;
+    background-color: #333;
     color: #FFC700;
     width: 200px;
 }
+.fila__tabla{
+    margin-top: 1px;
+}
 
 #indice, #detalle{
-    background-color: #68788C;
+    background-color: #333;
     color: #FFC700;
     width: 50px;
 }
@@ -83,6 +74,12 @@ table tr th {
     height: 18px;
 }
 
+#td_detalle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #imagen_ver_detalle:hover{
     cursor: pointer;
 }
@@ -91,6 +88,49 @@ table tr th {
     cursor: pointer;
 }
 
-#imagen_cerrar_sesion:hover{
+.imagen__mostrar-mas{
     cursor: pointer;
+}
+
+#seccionPrincipal{
+    display: flex;
+    flex-direction: row;
+}
+#mas__informacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 50%;
+}
+
+#mas__informacion span{
+    color: #333;
+    margin-left: 5px;
+}
+#mas__informacion P{
+    margin-left: 3px;
+}
+.div_info_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+.div__informacion{
+    position: fixed;
+    max-width: 30%;
+    min-width: 40%;
+    right: 100px;
+    top: 120px;
+    border: #333 dotted 2px;
+    border-radius: 2%;
+}
+
+.cambiarColorFila{
+    background: #979DA6;
+}
+
+.cleanBackgound{
+    background: whitesmoke;
 }

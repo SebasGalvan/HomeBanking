@@ -97,27 +97,7 @@ class UILogin{
             formularioLogin.removeChild(formularioLogin.firstChild);
         }
     }
-}
-class Usuario{
-
-    constructor(nombre,apellido){
-        this.nombre =nombre;
-        this.apellido = apellido; 
-    }
-
-    get nombre(){
-        return this.nombre
-    }
-
-    set nombre(nombre){
-        this.nombre = nombre
-    }
-
-    toString(){
-        return  `${this.nombre}, ${this.apellido}`;
-    }
-}
-        
+}     
 function consultarUsuario(e){
     e.preventDefault();
 
@@ -150,10 +130,7 @@ function consultarUsuario(e){
       })
 }
 function guardarUsuarioSession(usuarioObj){
-    
-   const {nombre ,apellido} = usuarioObj;
-    sessionStorage.setItem('Nombre', nombre)
-    sessionStorage.setItem('Apellido', apellido)
+        sessionStorage.setItem('datos',JSON.stringify(usuarioObj))
 }
 function validarPassword(e){
 
@@ -171,7 +148,6 @@ function validarPassword(e){
       .then(function (response) {
         usuario =  response.data;
         if(usuario.length){
-        console.log(usuario);
         guardarUsuarioSession(usuario[0]);
         location.replace('paginas/home.html');
         }

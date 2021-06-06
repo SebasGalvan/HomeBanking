@@ -1,19 +1,20 @@
-nombre= sessionStorage.getItem('Nombre')
-apellido= sessionStorage.getItem('Apellido')
-console.log(nombre);
-console.log(apellido);
+datos= JSON.parse(sessionStorage.getItem('datos'))
 
+if  (datos == null ) {
+  location.replace('../paginas/401.html')
+}
 
-if (!(nombre==null) && !(apellido==null)) {
+if((datos.usuario==null) && (datos.password==null)){
+  location.replace('../paginas/401.html');
+}
+
 let transferenciasLista = [];
 const filas = 20;
 let control_paginas= 1;
 let ordenamiento = "";
+let filaAnterior = "";
 
 class UIResumen{
-
-  
-
 
   llenarTabla(lista){
 
@@ -27,6 +28,7 @@ class UIResumen{
     th1.textContent="Fecha";
     const imagenFecha =  document.createElement('img')
     imagenFecha.id ="ordenar"
+    imagenFecha.src= "../iconos/vertical_align_bottom.png"
     imagenFecha.addEventListener('click', ordenarPorFecha)
 
     th1.appendChild(imagenFecha);
@@ -35,7 +37,6 @@ class UIResumen{
     const th3 = document.createElement('th');
     th3.id="detalle"
     th3.textContent="Detalle";
-  
   
     cabecera.appendChild(id);
     cabecera.appendChild(th1);
@@ -46,20 +47,22 @@ class UIResumen{
 
     tabla.appendChild(cabecera);
 
-
-
       let rows = control_paginas * filas;
       let i=0;
       while(i<lista.length && i<rows ){
         const row = document.createElement("tr");
+        row.classList="fila__tabla"
+        row.id = i
 
         const imagen = document.createElement('img');
         imagen.src = "../iconos/add_circle.png";
-        imagen.id = "imagen_ver_detalle";
+        imagen.classList = "imagen__mostrar-mas"
+        imagen.id = lista[i].id;
+        imagen.addEventListener("click",ver_detalle)
 
-        const th_detalle = document.createElement('tr');
-        th_detalle.classList = 'tr_detalle';
-        th_detalle.appendChild(imagen);
+        const td_detalle = document.createElement('td');
+        td_detalle.id = 'td_detalle';
+        td_detalle.appendChild(imagen);
 
         // <td>${lista[t].id}</td>
 
@@ -68,7 +71,7 @@ class UIResumen{
                 <td>${lista[i].fecha.toLocaleDateString()}</td>
                 <td>${lista[i].titulo}</td>  
             `;
-        row.appendChild(th_detalle);
+        row.appendChild(td_detalle);
         tabla.appendChild(row);
 
         i++;
@@ -84,9 +87,45 @@ class UIResumen{
     const tabla =  document.querySelector("#tabla__resumen");
     while (tabla.firstChild) {
       tabla.removeChild(tabla.firstChild);
-  }
-}}
+  }}
 
+  cargarInfoDatos(registro){
+
+    const mas__informacion = document.querySelector("#mas__informacion");
+    mas__informacion.hidden= false;
+
+    //let {id,fecha,titulo,descripcion,debito,credito, saldoParcial} = registro;
+
+    const contenedor_div = document.createElement('div');
+    contenedor_div.classList = "div__informacion"
+
+    for (const t in registro) {
+
+      const contenedor =  document.createElement("div");
+      contenedor.classList="div_info_items"
+      const span = document.createElement('span');
+      span.classList = t + "__span"
+      span.textContent = t.toUpperCase() +" : "
+      const p = document.createElement('p');
+      p.textContent = `${registro[t]}`
+      contenedor.appendChild(span);
+      contenedor.appendChild(p);
+      contenedor_div.appendChild(contenedor);
+    }
+
+   
+    mas__informacion.appendChild(contenedor_div)
+    const idOperacion =  document.querySelector(".id__span");
+    idOperacion.textContent = "ID OPERACION: " 
+  
+  }
+
+  limpiarInformacion(){
+    const info =  document.querySelector("#mas__informacion");
+    while (info.firstChild) {
+      info.removeChild(info.firstChild);
+  }}
+}
 UI = new UIResumen();
 
 inicio();
@@ -95,13 +134,14 @@ function inicio() {
 
     eventListeners();
 
+    const mas__informacion = document.querySelector("#mas__informacion")
+    mas__informacion.hidden = true
 
     let transferencias;
     axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/transferencias', {
               })
               .then(function (response) {
                 transferencias =  response.data;
-                console.log(transferencias);
                 transferencias.forEach(t => { 
                     t.fecha = convertirStringADate(t.fecha)  
                 });
@@ -111,7 +151,6 @@ function inicio() {
                 ordenar.src="../iconos/vertical_align_bottom.png"
 
                 UI.sincronizarLista(transferenciasLista);
-                
               })
               .catch(function (error) {
                 console.log(error);
@@ -124,7 +163,7 @@ function eventListeners(){
   const botonBuscar = document.querySelector('#boton__buscar');
   botonBuscar.addEventListener('submit', filtrarPorTitulo);
 
-  const etiquetaCancelarFiltro = document.querySelector("#cancelar_filtro")
+  const etiquetaCancelarFiltro = document.querySelector(".cancelar_filtro")
   etiquetaCancelarFiltro.addEventListener('click',cancelarFiltro);
   
   const mostrarMas = document.querySelector("#mostrar_mas")
@@ -132,6 +171,7 @@ function eventListeners(){
   
   const cerrar_sesion = document.querySelector("#cerrarSession")
   cerrar_sesion.addEventListener('click',cerrarSesionResumen);
+  
 
 }
 
@@ -149,12 +189,14 @@ function convertirStringADate(fechaObj){
 function ordenarPorFecha(){
 
 
-  const etiquetaCancelarFiltro = document.querySelector("#cancelar_filtro")
-  etiquetaCancelarFiltro.hid
-  
+  const img = document.querySelector(".cancelar_filtro img")
+  const p = document.querySelector(".cancelar_filtro p")
+  img.hidden= false
+  p.hidden= false
+
   if(ordenamiento==""){
-    UI.llenarTabla(transferenciasLista);
     ordenamiento="Asc"
+    ordenarPorFecha();
     return;
   }
   
@@ -189,36 +231,44 @@ function ordenarPorFecha(){
 
 }
 
-function filtrarPorTitulo(e){
+function filtrarPorTitulo(){
   e.prevenDefault();
 }
 
 function cancelarFiltro() {
-  const etiquetaCancelarFiltro = document.querySelector("#cancelar_filtro")
-  etiquetaCancelarFiltro.hidden= true;
+  const img = document.querySelector(".cancelar_filtro img")
+  const p = document.querySelector(".cancelar_filtro p")
+  img.hidden= true;
+  p.hidden= true;
   UI.limpiarTabla();
   UI.llenarTabla(transferenciasLista);
   const ordenar = document.querySelector("#ordenar");
   ordenar.src = "../iconos/vertical_align_top.png"
+  UI.limpiarInformacion(filtros)
 }
 
 function mostrarMasFilas() {
+  
   control_paginas++;
   UI.limpiarTabla();
   ordenarPorFecha();
-  console.log(control_paginas);
+  UI.limpiarInformacion()
+ 
 }
 
 function cerrarSesionResumen() {
       cerrarSesion();
-  // sessionStorage.removeItem("Nombre");
-  // sessionStorage.removeItem("Apellido");
-  // sessionStorage.removeItem('transferencias');
-  // location.replace('../index.html');
 }
 
-}else{
+function ver_detalle(){
+  const registroID =  Number(this.id);
+  filaAnterior.classList = "cleanBackgound"
+  const miFila = this.parentNode.parentNode;
+  filaAnterior = miFila
+  miFila.classList = "cambiarColorFila";
 
-  location.replace('../paginas/401.html');
-
-}
+  const datosRegistro = transferenciasLista.filter(t => t.id == registroID)
+  UI.limpiarInformacion()
+  UI.cargarInfoDatos(datosRegistro[0])
+  
+} 
