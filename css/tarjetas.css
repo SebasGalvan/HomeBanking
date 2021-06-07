@@ -1,0 +1,26 @@
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+
+
+.tarjeta_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tarjeta{
+    margin: 0%;
+    padding: 0%;
+    border: #333 dotted 1px;
+}
+
+#id_imagen_tarjetas{
+    max-width: 650px;
+    max-height: 500px;
+}
