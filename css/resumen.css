@@ -134,3 +134,7 @@ table tr th {
 .cleanBackgound{
     background: whitesmoke;
 }
+
+#boton_realiazar_transferencia{
+    cursor: pointer;
+}
