@@ -44,7 +44,7 @@
 
 #contenedor__boton{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: left;
 }
 
@@ -78,4 +78,30 @@
 #boton_realiazar_transferencia:hover{
   background-color: #F2D64B;
   color: black;
+}
+
+.campo_formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+
+.campo_formulario > i , #faltan_completar_campos{
+    width: 300px;
+    color: #8b0000;
+    margin: 0%;
+    padding: 0%;
+    justify-content: right;
+}
+
+#faltan_campos{
+
+    display: flex;
+    justify-content: right;
+}
+
+#transaccion_completada{
+    color:whitesmoke;
+    background: g#008000;
 }

@@ -65,17 +65,17 @@ class UIResumen{
         td_detalle.appendChild(imagen);
 
         // <td>${lista[t].id}</td>
-
+        /* <td>${lista[i].fecha.toLocaleDateString()}</td> */
         row.innerHTML = `
                 <td>${i+1}</td>
-                <td>${lista[i].fecha.toLocaleDateString()}</td>
+                <td>${lista[i].fecha}</td>
                 <td>${lista[i].titulo}</td>  
             `;
         row.appendChild(td_detalle);
         tabla.appendChild(row);
 
         i++;
-
+      
       }
     }
   sincronizarLista(lista){
@@ -160,9 +160,6 @@ function inicio() {
 
 
 function eventListeners(){
-  const botonBuscar = document.querySelector('#boton__buscar');
-  botonBuscar.addEventListener('submit', filtrarPorTitulo);
-
   const etiquetaCancelarFiltro = document.querySelector(".cancelar_filtro")
   etiquetaCancelarFiltro.addEventListener('click',cancelarFiltro);
   
@@ -171,6 +168,9 @@ function eventListeners(){
   
   const cerrar_sesion = document.querySelector("#cerrarSession")
   cerrar_sesion.addEventListener('click',cerrarSesionResumen);
+
+  const input_campo_filtrar = document.querySelector("#input_campo_filtrar")
+  input_campo_filtrar.addEventListener('input',filtrarPalabra);
   
 
 }
@@ -187,12 +187,7 @@ function convertirStringADate(fechaObj){
 
 
 function ordenarPorFecha(){
-
-
-  const img = document.querySelector(".cancelar_filtro img")
-  const p = document.querySelector(".cancelar_filtro p")
-  img.hidden= false
-  p.hidden= false
+  mostrarCancelarFiltro();
 
   if(ordenamiento==""){
     ordenamiento="Asc"
@@ -231,15 +226,8 @@ function ordenarPorFecha(){
 
 }
 
-function filtrarPorTitulo(){
-  e.prevenDefault();
-}
-
 function cancelarFiltro() {
-  const img = document.querySelector(".cancelar_filtro img")
-  const p = document.querySelector(".cancelar_filtro p")
-  img.hidden= true;
-  p.hidden= true;
+  mostrarCancelarFiltro(true);
   UI.limpiarTabla();
   UI.llenarTabla(movimientosLista);
   const ordenar = document.querySelector("#ordenar");
@@ -272,3 +260,37 @@ function ver_detalle(){
   UI.cargarInfoDatos(datosRegistro[0])
   
 } 
+
+
+function filtrarPalabra(){ 
+
+  let movimientos = JSON.parse(sessionStorage.getItem("movimientos"))
+  let misMovimientos = movimientos.slice();
+  console.log(misMovimientos);
+  let listaNueva= [];
+
+
+  misMovimientos.forEach(m => {
+    if(((m.titulo).includes(this.value)) || ((m.descripcion).includes(this.value))){
+          listaNueva.push(m)
+    }
+  });
+
+  // listaNueva.forEach(l => { 
+  //   l.fecha = convertirStringADate(l.fecha)  
+  // });
+  console.log("LISTA NUEVA");
+  console.log(listaNueva);
+  UI.limpiarInformacion()
+  UI.limpiarTabla();
+  UI.llenarTabla(listaNueva);
+  listaNueva =[];
+}
+
+
+function mostrarCancelarFiltro(opcion){
+  const img = document.querySelector(".cancelar_filtro img")
+  const p = document.querySelector(".cancelar_filtro p")
+  img.hidden= opcion
+  p.hidden= opcion
+}

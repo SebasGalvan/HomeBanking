@@ -32,47 +32,51 @@
     </nav>
     <div id="contenido">
         <div id="contenedor__formulario">
-            <form action="">
+            <form id="formulario__transferencia" action="">
                 <div class="campo_formulario">
                     <label for="">Nombre: </label>
-                    <input type="text" placeholder="Nombre">
-                    <i class="campo_no_valido" hidden=true>Nombre no valido</i>
-                    <i class="compo_obligatorio" hidden=true>El campo es obligatorio</i>
+                    <input id="input__nombre" type="text" placeholder="Nombre">
+                    <i id="campo_obligatorio_nombre" hidden=true>El campo es obligatorio</i>
                 </div>
                 <div class="campo_formulario">
                     <label for="">Apellido: </label>
-                    <input type="text" placeholder="Apellido">
-                    <i class="campo_no_valido" hidden=true>Apellido no valido</i>
-                    <i class="compo_obligatorio" hidden=true>El campo es obligatorio</i>
+                    <input id="input__apellido" type="text" placeholder="Apellido">
+                    <i id="campo_obligatorio_apellido" hidden=true>El campo es obligatorio</i>
                 </div>
                 <div class="campo_formulario">
                     <label for="">DNI:</label>
-                    <input type="number" placeholder="DNI">
-                    <i class="campo_no_valido" hidden=true>DNI no valido</i>
-                    <i class="compo_obligatorio" hidden=true>El campo es obligatorio</i>
+                    <input id="input__dni" type="number" placeholder="DNI">
+                    <i id="campo_obligatorio_dni" hidden=true>El campo es obligatorio</i>
                 </div>
                 <div class="campo_formulario">
                     <label for="">Numero de Cuenta: </label>
-                    <input type="text" placeholder="N° de cuenta">
-                    <i class="campo_no_valido" hidden=true>N° de cuenta no valido</i>
-                    <i class="compo_obligatorio" hidden=true>El campo es obligatorio</i>
+                    <input id="input__nro-cuenta" type="number" placeholder="N° de cuenta">
+                    <i id="campo_obligatorio_nro-cuenta" hidden=true>El campo es obligatorio</i>
                 </div>
                 <div class="campo_formulario">
                     <label for="">CBU</label>
-                    <input type="number" placeholder="CBU">
-                    <i class="campo_no_valido" hidden=true>CBU no valido</i>
-                    <i class="compo_obligatorio" hidden=true>El campo es obligatorio</i>
+                    <input id="input__cbu" type="number" placeholder="CBU">
+                    <i id="campo_no_valido_cbu" hidden=true>CBU no valido</i>
+                    <i id="campo_obligatorio_cbu" hidden=true>El campo es obligatorio</i>
                 </div>
                 <div class="campo_formulario">
                     <label for="">Monto</label>
-                    <input type="number" placeholder="Monto">
-                    <i class="campo_no_valido" hidden=true>Monto no valido</i>
-                    <i class="compo_obligatorio" hidden=true>El campo es obligatorio</i>
+                    <input id="input__monto" type="number" placeholder="Monto">
+                    <i id="campo_no_valido_monto" hidden=true>Monto no valido</i>
+                    <i id="campo_obligatorio_monto" hidden=true>El campo es obligatorio</i>
+                    <i id="monto_insuficiente" hidden=true>No tiene saldo suficiente</i>
                 </div>
                 <div id="contenedor__boton">
                 <button id="boton_realiazar_transferencia" type="submit">Transferir</button>
                 </div>
             </form>
+            <div id="faltan_campos">
+                <i id="faltan_completar_campos" hidden=true>Campos incompletos</i>
+            </div>
+            <div id="exito">
+                <i id="transaccion_completada" hidden=true>Transaccion Exitosa!</i>
+            </div>
+            
         </div>
         <div id="contenedor_imagen">
             <img id="imagen_transferencia" src="../img/transferencia.png" alt="Imagen transferencia">
