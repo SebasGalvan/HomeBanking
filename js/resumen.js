@@ -137,7 +137,7 @@ function inicio() {
     const mas__informacion = document.querySelector("#mas__informacion")
     mas__informacion.hidden = true
 
-    let tmovimientos;
+    let movimientos;
     axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/movimientos', {
               })
               .then(function (response) {
@@ -146,7 +146,7 @@ function inicio() {
                     t.fecha = convertirStringADate(t.fecha)  
                 });
                 movimientosLista = movimientos.slice();
-                UI.llenarTabla(movimientossLista);
+                UI.llenarTabla(movimientosLista);
                 const ordenar = document.querySelector("#ordenar");
                 ordenar.src="../iconos/vertical_align_bottom.png"
 
