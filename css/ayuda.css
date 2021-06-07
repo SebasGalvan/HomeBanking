@@ -1,0 +1,11 @@
+#seccion_principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagen__ayuda{
+    max-width: 650px;
+    max-height: 500px;
+}
