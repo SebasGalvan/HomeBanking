@@ -270,6 +270,16 @@
           "credito": "0,00", 
           "saldo parcial": "1000,00"
         }
+          
+    ],
+    "transferencias":[
+          {
+            "nombre": "Sergio",
+            "apellido": "Perez",
+            "dni": "29356124",
+            "numero_cuenta": "123564831547321",
+            "cbu": "1236542563259885455214",
+            "monto": 36000
+         } 
     ]
-    
-  }
+}
