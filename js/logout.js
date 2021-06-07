@@ -1,5 +1,5 @@
 function cerrarSesion(){
     sessionStorage.removeItem("datos");
-    sessionStorage.removeItem('transferencias');
+    sessionStorage.removeItem('movimientos');
     location.replace('../index.html');
 }

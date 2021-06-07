@@ -35,7 +35,7 @@
           "fechaCaducidad":"07/2031"
         }
       ],
-    "transferencias": [
+    "movimientos": [
         {
           "id": 1,
           "fecha": "20/05/2021",

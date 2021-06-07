@@ -8,7 +8,7 @@ if((datos.usuario==null) && (datos.password==null)){
   location.replace('../paginas/401.html');
 }
 
-let transferenciasLista = [];
+let movimientosLista = [];
 const filas = 20;
 let control_paginas= 1;
 let ordenamiento = "";
@@ -79,7 +79,7 @@ class UIResumen{
       }
     }
   sincronizarLista(lista){
-    sessionStorage.setItem('transferencias', JSON.stringify(lista));
+    sessionStorage.setItem('movimientos', JSON.stringify(lista));
   } 
 
   limpiarTabla(){
@@ -137,20 +137,20 @@ function inicio() {
     const mas__informacion = document.querySelector("#mas__informacion")
     mas__informacion.hidden = true
 
-    let transferencias;
-    axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/transferencias', {
+    let tmovimientos;
+    axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/movimientos', {
               })
               .then(function (response) {
-                transferencias =  response.data;
-                transferencias.forEach(t => { 
+                movimientos =  response.data;
+                movimientos.forEach(t => { 
                     t.fecha = convertirStringADate(t.fecha)  
                 });
-                transferenciasLista = transferencias.slice();
-                UI.llenarTabla(transferenciasLista);
+                movimientosLista = movimientos.slice();
+                UI.llenarTabla(movimientossLista);
                 const ordenar = document.querySelector("#ordenar");
                 ordenar.src="../iconos/vertical_align_bottom.png"
 
-                UI.sincronizarLista(transferenciasLista);
+                UI.sincronizarLista(movimientosLista);
               })
               .catch(function (error) {
                 console.log(error);
@@ -201,7 +201,7 @@ function ordenarPorFecha(){
   }
   
 
-  let lista = transferenciasLista.slice();
+  let lista = movimientosLista.slice();
   listaOrdenada = lista.sort(function (a, b) {
       if (a.fecha > b.fecha) {
         return 1;
@@ -241,7 +241,7 @@ function cancelarFiltro() {
   img.hidden= true;
   p.hidden= true;
   UI.limpiarTabla();
-  UI.llenarTabla(transferenciasLista);
+  UI.llenarTabla(movimientosLista);
   const ordenar = document.querySelector("#ordenar");
   ordenar.src = "../iconos/vertical_align_top.png"
   UI.limpiarInformacion(filtros)
@@ -267,7 +267,7 @@ function ver_detalle(){
   filaAnterior = miFila
   miFila.classList = "cambiarColorFila";
 
-  const datosRegistro = transferenciasLista.filter(t => t.id == registroID)
+  const datosRegistro = movimientosLista.filter(t => t.id == registroID)
   UI.limpiarInformacion()
   UI.cargarInfoDatos(datosRegistro[0])
   

@@ -1,0 +1,81 @@
+/* Color Theme Swatches in Hex */
+.hex-1 { color: #68788C; }
+.hex-2 { color: #979DA6; }
+.hex-3 { color: #F2E205; }
+.hex-4 { color: #F2EEB3; }
+.hex-5 { color: #F2D64B; }
+.color-principal { color: #FFC700;}
+/*___________________________________________________________________*/
+
+
+#contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+}
+#contenedor_imagen{
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+}
+#imagen_movimientos{
+    
+    max-width: 650px;
+    max-height: 500px;
+}
+
+#contenedor__formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor__formulario form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 120px;
+    border: #333 dotted 1px;
+    padding: 1em;   
+}
+
+#contenedor__boton{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.campo_formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 1em;
+    width: 50%;
+}
+
+#contenedor__formulario form input{
+    width: 300PX;
+}
+
+#contenedor__boton {
+    margin-top: 13px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#boton_realiazar_movimientos {
+  background: #FFC700 ;
+  color: #333;
+  border-radius: 7px;
+  width: 120px;
+  height: 30px ;
+  border: whitesmoke solid 1px;
+  font-size: 13px;
+}
+#boton_realiazar_movimientos:hover{
+  background-color: #F2D64B;
+  color: black;
+}

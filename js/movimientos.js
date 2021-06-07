@@ -11,17 +11,17 @@ if((datos.usuario==null) && (datos.password==null)){
 function inicio(){
 
   const cerrar_sesion = document.querySelector("#cerrarSession")
-  cerrar_sesion.addEventListener('click',cerrarSesionTransferencia);
+  cerrar_sesion.addEventListener('click',cerrarSesionMovimientos);
 
 }
 
 
 
-function agregarTransferencia(){
-    cargarTransferencias()
-    let listaTransferencias = JSON.parse(sessionStorage.getItem("transferencias"))
-    console.log(listaTransferencias.length);
-    let indice = listaTransferencias.length;
+function agregarMovimiento(){
+    cargarMovimiento()
+    let listaMovimientos = JSON.parse(sessionStorage.getItem("movimientos"))
+    console.log(listaMovimientos.length);
+    let indice = listaMovimientos.length;
 
    
     console.log(indice);          
@@ -40,7 +40,7 @@ function agregarTransferencia(){
 
   axios({
     method: 'post',
-    url: 'https://my-json-server.typicode.com/SebasGalvan/HomeBanking/transferencias',
+    url: 'https://my-json-server.typicode.com/SebasGalvan/HomeBanking/movimientos',
     data: miObjeto
   });
 
@@ -48,7 +48,7 @@ function agregarTransferencia(){
 }
 
 
-function cerrarSesionTransferencia() {
+function cerrarSesionMovimientos() {
   cerrarSesion();
 }
 

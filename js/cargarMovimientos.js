@@ -1,14 +1,14 @@
 
-function cargarTransferencias(){
-axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/transferencias', {
+function cargarMovimientos(){
+axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/movimientos', {
               })
               .then(function (response) {
-                transferencias =  response.data;
-                transferencias.forEach(t => { 
+                movimientos =  response.data;
+                movimientos.forEach(t => { 
                     t.fecha = convertirStringADate(t.fecha)  
                 });
-                lista = transferencias.slice();
-                sessionStorage.setItem('transferencias', JSON.stringify(lista));
+                lista = movimientos.slice();
+                sessionStorage.setItem('movimientos', JSON.stringify(lista));
               })
               .catch(function (error) {
                 console.log(error);
