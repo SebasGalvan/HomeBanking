@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <title>Home</title>
 </head>
 <body>
@@ -15,16 +16,25 @@
         <nav>
             <ul>
                 <li><a href="../paginas/home.html"><img src="../iconos/home.png" alt="Logo Home">Home</a></li>
-                <li><a href="../paginas/resumen.html"><img src="../iconos/Resumen.png" alt="Logo Resumen">Resumen</a></li>
-                <li><a href="../paginas/tarjetas.html"><img src="../iconos/tarjeta.png" alt="Logo Tarjeta">Tarjetas</a></li>
-                <li><a href="../paginas/transferencias.html"><img src="../iconos/transferencia.png" alt="Logo Transferencias">Transferencias</a></li>
-                <li><a href="../paginas/help.html"><img src="../iconos/ayuda.png" alt="Logo Ayuda">Ayuda</a></li>
+                <li><a href="../paginas/resumen.html">Resumen</a></li>
+                <li><a href="../paginas/tarjetas.html">Tarjetas</a></li>
+                <li><a href="../paginas/transferencias.html">Transferencias</a></li>
+                <li><a href="../paginas/help.html">Ayuda</a></li>
             </ul>
             <div id="contenedor__info-user">
-                <div class="datos__usuario">
-                    <p id="nombre__usuario"></p>
-                    <p id="idcuenta__usuario"></p>
-                    <p id="saldo__usuario"></p>
+                <div class="datos__usuario" id="contenedor_datos_usuarios">
+                    <div class="contenedor_item_datos">
+                        <p class="etiqueta_datos">Usuario</p>
+                        <p id="nombre__usuario" class="valor_datos"></p>
+                    </div>
+                    <div class="contenedor_item_datos">
+                        <p class="etiqueta_datos">N° Cuenta</p>
+                        <p id="idcuenta__usuario" class="valor_datos"></p>
+                    </div>
+                    <div class="contenedor_item_datos">
+                        <p class="etiqueta_datos">Saldo</p>
+                        <p id="saldo__usuario" class="valor_datos"></p>
+                    </div>
                 </div>
                 <div id="imagen__nav"> 
                     <div id="cerrarSession"><img id="imagen_cerrar_sesion" src="../iconos/power_settings_new.png"></div>
@@ -50,7 +60,16 @@
         </div>
 
         <footer>
-            <p>Footer </p>
+            <div>
+                <p>© Copyright 2021</p>
+            </div>
+            <div class="redes">
+                <a class="redes__logos" href="https://github.com/SebasGalvan" target="_blank"><img src="../iconos/github.png" alt="Logo Github"></a>
+                <a class="redes__logos" href="https://www.linkedin.com/in/sebastian-galvan/" target="_blank"><img src="../iconos/LinkedIn.png" alt="Logo LinkedIn"></a>
+                <a class="redes__logos" href="https://twitter.com/SebaAleGalvan" target="_blank"><img src="../iconos/twitter.png" alt="Logo Twitter"></a>
+            </div>
+    
+            <img id="logo_link" src="../img/Red_link_logo.png" alt="Logo Link" width="30px" height="30px">
         </footer>
     </div>
     <script src="../js/completarCampos.js"></script>
