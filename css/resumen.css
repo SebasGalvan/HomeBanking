@@ -17,6 +17,7 @@ p{
     flex-direction: column;
     background-color: whitesmoke;
     font-family: 'Hind Siliguri', sans-serif;
+    min-height: 585px;
 }
 
 .cancelar_filtro{
