@@ -1,18 +1,18 @@
 {
   "usuarios":[
     {
-      "nombre": "Leonel",
-      "apellido": "Messi",
+      "nombre": "Juan",
+      "apellido": "Diaz",
       "usuario": "usuario1",
       "password" : "1234",
       "domicilioCalle" : "España",
       "domicilioNumero" : "4857",
       "codigoPostal" : "43423",
       "telefono" : "3419834893",
-      "email" : "messi@mailito.com",
+      "email" : "j_diaz@mailito.com",
       "fechaNacimiento" : "10/10/1985",
       "sexo" : "M",
-      "nroHijos" : "3",
+      "nroHijos" : "No",
       "idCuentaBancaria":"006501581485721",
       "estado":"Activo",
       "saldo":190000,
@@ -35,6 +35,9 @@
           "fechaCaducidad":"07/2031"
         }
       ],
+      "tarjetas-adicionales":[     
+     
+      ],
     "movimientos": [
         {
           "id": 1,
@@ -42,7 +45,8 @@
           "titulo": "Deb. Autom. De Serv.",
           "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
           "debito": "100,00", 
-          "credito": "0,00", 
+          "credito": "0,00",
+          "comprobante":"77589632",
           "saldo parcial": "1000,00"
         },
         {
@@ -51,7 +55,8 @@
           "titulo": "Transferencia A Terceros",
           "descripcion": "Cbu 1500021302337165742752 Cu 22334534143 Rbts 4517xxxxxxxxxx06 Varios",
           "debito": "300,00", 
-          "credito": "0,00", 
+          "credito": "0,00",
+          "comprobante":"77234156",
           "saldo parcial": "700,00"
         },
         {
@@ -61,34 +66,38 @@
           "descripcion": "Cuenta Origen Caja Ahorro Pesos Varios 4517xxxxxxxxxx45 4444448769",
           "debito": "0", 
           "credito": "1.000,00", 
+          "comprobante":"78541236",
           "saldo parcial": "1700,00"
         },
         {
           "id": 4,
           "fecha": "12/11/2016",
-          "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "titulo": "Transferencia De Cuenta Propia",
+          "descripcion": "Cuenta Origen Caja Ahorro Pesos Varios 2143xxxxxxxxxx45 12345156431",
+          "debito": ",00", 
+          "credito": "5000,00",
+          "comprobante":"15486323", 
+          "saldo parcial": "7000,00"
         },
         {
           "id": 5,
           "fecha": "17/04/2016",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
+          "descripcion": " WWW.E-MEGATONE.COM.AR Cuota 05/06 HORNO PHILIPS",
+          "debito": "560,00", 
           "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "comprobante":"1234875",
+          "saldo parcial": "2563,42"
         },
         {
           "id": 6,
           "fecha": "189/03/2017",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "WWW.MERCADOPAGO.COM Cuota 10 PC PCMASTER",
+          "debito": "1000,00", 
+          "credito": "0,00",
+          "comprobante":"21542364",
+          "saldo parcial": "6300,15"
         },
         {
           "id": 7,
@@ -96,17 +105,19 @@
           "titulo": "Deb. Autom. De Serv.",
           "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
           "debito": "100,00", 
-          "credito": "0,00", 
+          "credito": "0,00",
+          "comprobante":"78563269",
           "saldo parcial": "1000,00"
         },
         {
           "id": 8,
           "fecha": "18/04/2019",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "VISA PLAN V 3-04 (TNA)  ",
+          "debito": "12000,00", 
+          "credito": "0,00",
+          "comprobante":"1234875",
+          "saldo parcial": "25000,00"
         },
         {
           "id": 9,
@@ -114,35 +125,39 @@
           "titulo": "Deb. Autom. De Serv.",
           "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
           "debito": "100,00", 
-          "credito": "0,00", 
+          "credito": "0,00",
+          "comprobante":"65984512",
           "saldo parcial": "1000,00"
         },
         {
           "id": 10,
           "fecha": "12/05/2020",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "Spotify P016758176",
+          "debito": "315", 
+          "credito": "0,00",
+          "comprobante":"11356487",
+          "saldo parcial": "5000,00"
         },
         {
           "id": 11,
           "fecha": "03/02/2019",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "WALMART.COM8009666546 ID342342212-8/55",
+          "debito": "8512,40", 
+          "credito": "0,00",
+          "comprobante":"12457845",
+          "saldo parcial": "9000,00"
         },
         {
           "id": 12,
           "fecha": "04/08/2018",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": " MICROSOFT *OFFICE 36",
+          "debito": "856,00", 
+          "credito": "0,00",
+          "comprobante":"53626598",
+          "saldo parcial": "6230,00"
         },
         {
           "id": 13,
@@ -150,107 +165,119 @@
           "titulo": "Deb. Autom. De Serv.",
           "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
           "debito": "100,00", 
-          "credito": "0,00", 
+          "credito": "0,00",
+          "comprobante":"13265985",
           "saldo parcial": "1000,00"
         },
         {
           "id": 14,
           "fecha": "07/03/2015",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": " NETFLIX.COM",
+          "debito": "563,00", 
+          "credito": "0,00",
+          "comprobante":"236598654",
+          "saldo parcial": "9809,00"
         },
         {
           "id": 15,
           "fecha": "12/11/2015",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "BANCO NUEVO ROSARIO SEGURO 1404173000000-002-085",
+          "debito": "780,00", 
+          "credito": "0,00",
+          "comprobante":"23569856",
+          "saldo parcial": "6533,00"
         },
         {
           "id": 16,
           "fecha": "28/10/2016",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "BALANCEADOS DEL MERCADO SA",
+          "debito": "3710,00", 
+          "credito": "0,00",
+          "comprobante":"23659865",
+          "saldo parcial": "12300,00"
         },
         {
           "id": 17,
           "fecha": "09/04/2016",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "WALMART.COM80092315612 ID35421511-8/87",
+          "debito": "5622,00", 
+          "credito": "0,00",
+          "comprobante":"23477458",
+          "saldo parcial": "6000,00"
         },
         {
           "id": 18,
           "fecha": "16/11/2018",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "WALMART.COM8009123341 ID215481241-7/98",
+          "debito": "4503,70", 
+          "credito": "0,00",
+          "comprobante":"23569856",
+          "saldo parcial": "9000,00"
         },
         {
           "id": 19,
           "fecha": "14/01/2013",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "WALMART.COM800658971 ID342315124-8/98",
+          "debito": "3588,43", 
+          "credito": "0,00",
+          "comprobante":"235669568",
+          "saldo parcial": "7540,00"
         },
         {
           "id": 20,
           "fecha": "24/10/2020",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": " GOOGLE *Supercell",
+          "debito": "560,00", 
+          "credito": "0,00",
+          "comprobante":"11255487",
+          "saldo parcial": "4800,00"
         },
         {
           "id": 21,
           "fecha": "31/05/2019",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": " TELECENTRO SA 00000000393646",
+          "debito": "2500,00", 
+          "credito": "0,00",
+          "comprobante":"33652354", 
+          "saldo parcial": "6000,00"
         },
         {
           "id": 22,
           "fecha": "08/07/2013",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
+          "descripcion": "WWW.ARBA.GOV.AR 2156412341 21 ",
           "debito": "100,00", 
-          "credito": "0,00", 
+          "credito": "0,00",
+          "comprobante":"23659851",
           "saldo parcial": "1000,00"
         },
         {
           "id": 23,
           "fecha": "29/03/2015",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
+          "descripcion": "WWW.MERCADOPAGO.COM  0240201 BAZAR CORONA",
+          "debito": "6100,00", 
+          "credito": "0,00",
+          "comprobante":"87452369",
           "saldo parcial": "1000,00"
         },
         {
           "id": 24,
           "fecha": "19/08/2018",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": " ATM 0306573700000- IF ",
+          "debito": "1800,00", 
+          "credito": "0,00",
+          "comprobante":"23568457",
+          "saldo parcial": "7500,00"
         },
         {
           "id": 25,
@@ -258,17 +285,19 @@
           "titulo": "Deb. Autom. De Serv.",
           "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
           "debito": "100,00", 
-          "credito": "0,00", 
+          "credito": "0,00",
+          "comprobante":"23659865", 
           "saldo parcial": "1000,00"
         },
         {
           "id": 26,
           "fecha": "02/12/2016",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
-          "credito": "0,00", 
-          "saldo parcial": "1000,00"
+          "descripcion": "DISNEY+ PLAN CUOTA 3 34324/88",
+          "debito": "560,00", 
+          "credito": "0,00",
+          "comprobante":"23569856",
+          "saldo parcial": "9000,00"
         }
           
     ],
