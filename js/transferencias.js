@@ -112,8 +112,7 @@ function verificarDni() {
 }
 
 function verificarNroCuenta() {
-
-  let cuenta = inputCbu.value
+  let cuenta = inputNroCuenta.value
   const errorCampoObligatorio = document.querySelector("#campo_obligatorio_nro-cuenta")
   if (cuenta == "") {
     errorCampoObligatorio.hidden = false;
