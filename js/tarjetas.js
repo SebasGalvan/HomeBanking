@@ -20,6 +20,10 @@ axios.get('https://my-json-server.typicode.com/SebasGalvan/HomeBanking/tarjetas'
           });
 
 function iniciar(){
+
+  const cerrar_sesion = document.querySelector("#cerrarSession")
+  cerrar_sesion.addEventListener('click',cerrarSesionResumen);
+  
 const contenido = document.querySelector("#contenido");
 
 listaTarjetas =  JSON.parse(sessionStorage.getItem("tarjetas"))
@@ -117,4 +121,8 @@ listaTarjetas.forEach(t => {
 
         contenido.appendChild(tarjeta);
 });
+}
+
+function cerrarSesionResumen() {
+  cerrarSesion();
 }

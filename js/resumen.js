@@ -35,6 +35,7 @@ class UIResumen{
 
     th1.appendChild(imagenFecha);
     const th2 = document.createElement('th')
+    th2.id="descripcion__th"
     th2.textContent="Descripcion";
     const th3 = document.createElement('th');
     th3.id="detalle"
@@ -70,8 +71,8 @@ class UIResumen{
 
         row.innerHTML = `
                 <td>${i+1}</td>
-                <td class="fecha">${fecha}</td>
-                <td class="descripcion">${lista[i].descripcion}</td>
+                <td class="fecha_tabla">${fecha}</td>
+                <td class="descripcion_tabla">${lista[i].descripcion}</td>
             `;
         row.appendChild(td_detalle);
         tabla.appendChild(row)
@@ -94,8 +95,6 @@ class UIResumen{
 
     const mas__informacion = document.querySelector("#mas__informacion");
     mas__informacion.hidden= false;
-
-    //let {id,fecha,titulo,descripcion,debito,credito, saldoParcial} = registro;
 
     const contenedor_div = document.createElement('div');
     contenedor_div.classList = "div__informacion"
@@ -269,7 +268,7 @@ function filtrarPalabra(){
 
 
   misMovimientos.forEach(m => {
-    if(((m.titulo).includes(this.value)) || ((m.descripcion).includes(this.value))){
+    if(((m.titulo).toLowerCase().includes((this.value).toLowerCase())) || ((m.descripcion).toLowerCase().includes((this.value).toLowerCase()))){
           listaNueva.push(m)
     }
   });

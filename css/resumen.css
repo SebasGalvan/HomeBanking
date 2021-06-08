@@ -67,6 +67,7 @@ table tr th {
 
 #input_campo_filtrar{
     width: 380px;
+
 }
 
 #indice, #detalle{
@@ -74,10 +75,15 @@ table tr th {
     color: #FFC700;
     width: 50px;
 }
-
+#fecha__th{
+    width: 100px;
+}
+#descripcion__th{
+    width: 400px;
+}
 #filtros{
     margin-top: 1em;
-    margin-left: 5em;
+    margin-left: 4em;
 }
 
 #filtros > form , #filtros > .cancelar_filtro{
@@ -104,20 +110,16 @@ table tr th {
     align-items: center;
 }
 
-.descripcion{
-    width: 300px;
-}
-#fecha__th{
-
-}
-.fecha{
-    width: 20px;
-}
 
 #imagen_ver_detalle:hover{
     cursor: pointer;
 }
-
+.fecha_tabla{
+    width:30px ;
+}
+.descripcion.tabla{
+    min-width: 300px;
+}
 
 .imagen__mostrar-mas{
     cursor: pointer;
@@ -141,6 +143,7 @@ table tr th {
 .info_items{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: right;
     align-items: center;
     margin-left: 10px;
@@ -212,10 +215,4 @@ footer {
   #mostrar_mas:hover{
     cursor: pointer;
     background-color: #68788C;
-}
-
-
-.linea_tabla{
-    color: #3f3d56;
-
 }
