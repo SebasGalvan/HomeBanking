@@ -93,6 +93,28 @@ listaTarjetas.forEach(t => {
         tarjeta.appendChild(item__contenedor_fechaAfiliacion);
         tarjeta.appendChild(item__contenedor_fechaCaducidad);
 
+        const div_logos = document.createElement("div");
+        div_logos.classList = "contenedor_logos";
+
+        if (t.tipo =="Visa") {
+            const logo = document.createElement('img');
+            logo.classList= "logo__tarjeta";
+            logo.src = "../img/visa.png";
+            div_logos.appendChild(logo);
+        } else if(t.tipo == "Mastercard"){
+          const logo = document.createElement('img');
+          logo.classList = "logo__tarjeta";
+          logo.src = "../img/mastercard.png";
+          div_logos.appendChild(logo);
+        }
+
+        const chipLogo  = document.createElement("img");
+        chipLogo.classList = "logo__chip";
+        chipLogo.src ="../img/chip.png"
+        div_logos.appendChild(chipLogo)
+
+        tarjeta.appendChild(div_logos)
+
         contenido.appendChild(tarjeta);
 });
 }

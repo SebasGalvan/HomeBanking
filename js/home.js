@@ -33,3 +33,4 @@ estado.textContent = "ESTADO: "+datos.estado
 function cerrarSesionHome() {
   cerrarSesion();
 }
+

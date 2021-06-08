@@ -49,27 +49,25 @@ class Transferencia {
 
 function agregarTransaccion(e) {
 
+  
   e.preventDefault();
+  nombre = verificarNombre();
+  apellido = verificarApellido();
+  dni = verificarDni();
+  nroCuenta = verificarNroCuenta();
+  monto = verificarMonto();
+  cbu = verificarCbu();
 
-  if(inputNombre.value =="" || inputApellido.value =="" || inputDni.value =="" || inputNroCuenta.value =="" | inputCbu.value =="" || inputMonto.value ==""){
-    const faltan_completar_campos = document.querySelector("#faltan_completar_campos")
-    faltan_completar_campos.hidden = false;
-    setInterval(() => {
-      faltan_completar_campos.hidden = true;
-    }, 7000);
-    return
+  if(nombre && apellido && dni && nroCuenta && monto && cbu){
+        
+    let miTransferencia  = new Transferencia(inputNombre.value,inputApellido.value,inputDni.value,inputNroCuenta.value,inputCbu.value,inputMonto.value);
+    cargarTransferencia(miTransferencia);
   }
-
-  let miTransferencia  = new Transferencia(inputNombre.value,inputApellido.value,inputDni.value,inputNroCuenta.value,inputCbu.value,inputMonto.value);
-  cargarTransferencia(miTransferencia);
- 
 }
-
 
 function cerrarSesionMovimientos() {
   cerrarSesion();
 }
-
 
 function verificarNombre() {
   const errorCampoObligatorio = document.querySelector("#campo_obligatorio_nombre")
@@ -78,7 +76,11 @@ function verificarNombre() {
     setInterval(() => {
       errorCampoObligatorio.hidden = true;
     }, 7000);
-}}
+    return false;
+  }else{
+    return true;
+  }
+}
 
 function verificarApellido() {
   const errorCampoObligatorio = document.querySelector("#campo_obligatorio_apellido")
@@ -87,7 +89,11 @@ function verificarApellido() {
     setInterval(() => {
       errorCampoObligatorio.hidden = true;
     }, 7000);
-}}
+    return false;
+  } else {
+    return true;
+  }
+}
 
 function verificarDni() {
   const errorCampoObligatorio = document.querySelector("#campo_obligatorio_dni")
@@ -96,7 +102,11 @@ function verificarDni() {
     setInterval(() => {
       errorCampoObligatorio.hidden = true;
     }, 7000);
-}}
+    return false;
+  } else {
+    return true;
+  }
+}
 
 function verificarNroCuenta() {
   const errorCampoObligatorio = document.querySelector("#campo_obligatorio_nro-cuenta")
@@ -105,9 +115,15 @@ function verificarNroCuenta() {
     setInterval(() => {
       errorCampoObligatorio.hidden = true;
     }, 7000);
-}}
+    return false;
+  } else {
+    return true;
+  }
+}
 
 function verificarCbu() {
+
+  let tamaño = (inputCbu.value).length
 
   if (this.value == "") {
     const cbuObligatorio = document.querySelector("#campo_obligatorio_cbu");
@@ -115,70 +131,82 @@ function verificarCbu() {
     setTimeout(() => {
       cbuObligatorio.hidden = true
     }, 7000);
-  } else if (this.value.length != 22) {
+    return false;
+  } else if (tamaño!= 22) {
     const cbuNoValido = document.querySelector("#campo_no_valido_cbu");
     cbuNoValido.hidden = false;
     setTimeout(() => {
       cbuNoValido.hidden = true;
     }, 7000);
-}}
+    return false;
+  } else {
+    return true;
+  }
+}
 
 function verificarMonto() {
 
-  const datos =  JSON.parse(sessionStorage.getItem("datos"));
-  if (this.value == "") {
+  console.log(inputMonto.value);
+  let monto = Number(inputMonto.value);
+  
+  const datos = JSON.parse(sessionStorage.getItem("datos"));
+  if (monto == "") {
     const montoObligatorio = document.querySelector("#campo_obligatorio_monto");
     montoObligatorio.hidden = false
     setTimeout(() => {
       montoObligatorio.hidden = true
     }, 7000);
-  } else if ((Number(this.value) < 0) || (Number(this.value) > 1000000)) {
+    return false;
+  } else if (monto < 0) {
     const montoNoValido = document.querySelector("#campo_no_valido_monto");
+    montoNoValido.textContent="No se permiten numeros negativos"
     montoNoValido.hidden = false;
     setTimeout(() => {
       montoNoValido.hidden = true;
     }, 7000);
-
-  }else if (Number(this.value)> datos.saldo) {
+    return false;
+  } else if (monto > 1000000){
+    const montoNoValido = document.querySelector("#campo_no_valido_monto");
+    montoNoValido.textContent="Transferencias de más de 1M No Permitidas"
+    montoNoValido.hidden = false;
+    setTimeout(() => {
+      montoNoValido.hidden = true;
+    }, 7000);
+    return false;
+  }else if (monto > datos.saldo) {
     const montoInsuficiente = document.querySelector("#monto_insuficiente");
     montoInsuficiente.hidden = false;
     setTimeout(() => {
-    montoInsuficiente.hidden = true;
+      montoInsuficiente.hidden = true;
     }, 7000);
+    return false;
+  } else {
+    return true;
   }
 }
 
 
 function cargarTransferencia(objTransferencia){
-
-      
+  
     obtenerIndice();
-
     objTransferencia.id = indice + 1;
     const hoy = new Date()
     objTransferencia.fechaHora= hoy
-
-
     axios({
       method: 'post',
       url: 'https://my-json-server.typicode.com/SebasGalvan/HomeBanking/transferencias',
       data: objTransferencia
     });
-
     const datos = JSON.parse(sessionStorage.getItem("datos"));
     datos.saldo -= objTransferencia.monto;
     sessionStorage.setItem("datos",JSON.stringify(datos)); 
     actualizarMonto();
-
     const exito = document.querySelector("#transaccion_completada");
     exito.hidden = false;
     setInterval(() => {
       exito.hidden = true;
     }, 7000);
-
     limpiarFormulario()
-    
-
 }
 
 function obtenerIndice(){
@@ -193,10 +221,9 @@ function obtenerIndice(){
             .catch(function (error) {
               console.log(error);
             })
-
-
 }
 
 function limpiarFormulario(){
   const formulario = document.querySelector("#formulario__transferencia");
+  formulario.reset();
 }

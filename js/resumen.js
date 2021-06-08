@@ -7,8 +7,9 @@ if  (datos == null ) {
 if((datos.usuario==null) && (datos.password==null)){
   location.replace('../paginas/401.html');
 }
-
+/*Agregar a clase*/ 
 let movimientosLista = [];
+let listaActual = []
 const filas = 20;
 let control_paginas= 1;
 let ordenamiento = "";
@@ -18,8 +19,8 @@ class UIResumen{
 
   llenarTabla(lista){
 
-    const cabecera = document.createElement('tr');
 
+    const cabecera = document.createElement('tr');
 
     const id = document.createElement('th')
     id.id="indice"
@@ -28,12 +29,12 @@ class UIResumen{
     th1.textContent="Fecha";
     const imagenFecha =  document.createElement('img')
     imagenFecha.id ="ordenar"
-    imagenFecha.src= "../iconos/vertical_align_bottom.png"
+    imagenFecha.src= "../iconos/ordenar.png"
     imagenFecha.addEventListener('click', ordenarPorFecha)
 
     th1.appendChild(imagenFecha);
     const th2 = document.createElement('th')
-    th2.textContent="Titulo";
+    th2.textContent="Descripcion";
     const th3 = document.createElement('th');
     th3.id="detalle"
     th3.textContent="Detalle";
@@ -64,12 +65,12 @@ class UIResumen{
         td_detalle.id = 'td_detalle';
         td_detalle.appendChild(imagen);
 
-        // <td>${lista[t].id}</td>
-        /* <td>${lista[i].fecha.toLocaleDateString()}</td> */
+        let fecha =  fechaobjetoAString(lista[i].fecha);
+
         row.innerHTML = `
                 <td>${i+1}</td>
-                <td>${lista[i].fecha}</td>
-                <td>${lista[i].titulo}</td>  
+                <td>${fecha}</td>
+                <td>${lista[i].descripcion}</td>  
             `;
         row.appendChild(td_detalle);
         tabla.appendChild(row);
@@ -104,7 +105,7 @@ class UIResumen{
       const contenedor =  document.createElement("div");
       contenedor.classList="info_items"
       const span = document.createElement('span');
-      span.classList = "span_item"
+      span.classList = "span_item " + t
       span.textContent = t.toUpperCase() +": "
       const p = document.createElement('p');
       p.textContent = `${registro[t]}`
@@ -115,7 +116,7 @@ class UIResumen{
 
    
     mas__informacion.appendChild(contenedor_div)
-    const idOperacion =  document.querySelector(".id__span");
+    const idOperacion =  document.querySelector(".id");
     idOperacion.textContent = "ID OPERACION: " 
   
   }
@@ -143,13 +144,11 @@ function inicio() {
               .then(function (response) {
                 movimientos =  response.data;
                 movimientos.forEach(t => { 
-                    t.fecha = convertirStringADate(t.fecha)  
+                    t.fecha = convertirStringADate(t.fecha);
                 });
                 movimientosLista = movimientos.slice();
+                listaActual = movimientos.slice();
                 UI.llenarTabla(movimientosLista);
-                const ordenar = document.querySelector("#ordenar");
-                ordenar.src="../iconos/vertical_align_bottom.png"
-
                 UI.sincronizarLista(movimientosLista);
               })
               .catch(function (error) {
@@ -184,18 +183,7 @@ function convertirStringADate(fechaObj){
   let fecha = new Date(yyyy,mm,dd);
   return fecha;
 }
-
-
-function ordenarPorFecha(){
-  mostrarCancelarFiltro();
-
-  if(ordenamiento==""){
-    ordenamiento="Asc"
-    ordenarPorFecha();
-    return;
-  }
-  
-
+function ordenarDeMayoraMenor(){
   let lista = movimientosLista.slice();
   listaOrdenada = lista.sort(function (a, b) {
       if (a.fecha > b.fecha) {
@@ -206,32 +194,43 @@ function ordenarPorFecha(){
       }
       return 0;
     });
+  return listaOrdenada;
+}
 
+function ordenarPorFecha(){
+  mostrarCancelarFiltro();
+  let listaOrdenada = ordenarDeMayoraMenor();
   UI.limpiarTabla();
 
 
   if (ordenamiento == "Asc") {
     ordenamiento = "Desc";
-    UI.llenarTabla(lista);
+    UI.llenarTabla(listaOrdenada);
+    listaActual = listaOrdenada.slice();
     const ordenar = document.querySelector("#ordenar");
-    ordenar.src = "../iconos/vertical_align_top.png"
+    ordenar.src = "../iconos/menorAmayor.png"
 
   } else {
-    lista = lista.reverse();
+    lista = listaOrdenada.reverse();
+    listaActual= lista.slice();
     ordenamiento = "Asc";
     UI.llenarTabla(lista);
     const ordenar = document.querySelector("#ordenar");
-    ordenar.src = "../iconos/vertical_align_bottom.png"
+    ordenar.src = "../iconos/mayorAmenor.png"
   }
 
 }
 
 function cancelarFiltro() {
+  const form_filtro= document.querySelector("#formulario_filtrar");
+  form_filtro.reset();
+
+  control_paginas=1;
   mostrarCancelarFiltro(true);
   UI.limpiarTabla();
   UI.llenarTabla(movimientosLista);
   const ordenar = document.querySelector("#ordenar");
-  ordenar.src = "../iconos/vertical_align_top.png"
+  ordenar.src = "../iconos/ordenar.png"
   UI.limpiarInformacion(filtros)
 }
 
@@ -239,8 +238,8 @@ function mostrarMasFilas() {
   
   control_paginas++;
   UI.limpiarTabla();
-  ordenarPorFecha();
-  UI.limpiarInformacion()
+  UI.llenarTabla(listaActual)
+  mostrarCancelarFiltro(false);
  
 }
 
@@ -266,7 +265,6 @@ function filtrarPalabra(){
 
   let movimientos = JSON.parse(sessionStorage.getItem("movimientos"))
   let misMovimientos = movimientos.slice();
-  console.log(misMovimientos);
   let listaNueva= [];
 
 
@@ -275,12 +273,9 @@ function filtrarPalabra(){
           listaNueva.push(m)
     }
   });
+  listaActual = [];
+  listaActual = listaNueva.slice();
 
-  // listaNueva.forEach(l => { 
-  //   l.fecha = convertirStringADate(l.fecha)  
-  // });
-  console.log("LISTA NUEVA");
-  console.log(listaNueva);
   UI.limpiarInformacion()
   UI.limpiarTabla();
   UI.llenarTabla(listaNueva);
@@ -293,4 +288,15 @@ function mostrarCancelarFiltro(opcion){
   const p = document.querySelector(".cancelar_filtro p")
   img.hidden= opcion
   p.hidden= opcion
+}
+
+function fechaobjetoAString(strFecha) {
+
+  let objFecha =  new Date(strFecha)
+  dd= objFecha.getDate();
+  mm= objFecha.getMonth();
+  yy= objFecha.getFullYear()
+
+return `${dd}-${mm}-${yy}`
+  
 }
