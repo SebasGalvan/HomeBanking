@@ -10,6 +10,11 @@
 #contenedor{
     display: flex;
     flex-direction: column;
+    
+}
+h2{
+    color: #FFC700;
+    text-decoration: underline;
 }
 #contenido{
     display: flex;
@@ -18,7 +23,7 @@
     align-items: center;
     align-content: center;
     margin-top: 60px; 
- 
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 #imagen__contenido{

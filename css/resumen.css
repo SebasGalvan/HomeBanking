@@ -7,11 +7,16 @@
 .color-principal { color: #FFC700;}
 /*___________________________________________________________________*/
 
+p{
+    margin: 0%;
+    padding: 0%;
+}
+
 #contenido_tabla{
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
-
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
 .cancelar_filtro{
@@ -20,10 +25,12 @@
     align-items: center;
     color: darkred;
     cursor: pointer;
-    margin: 0%;
-    padding: 0%;
-    margin-left: 1em;
+    
+}
+
+.cancelar_filtro > p {
     font-size: 1em;
+    text-decoration: underline;
 }
 
 
@@ -36,27 +43,15 @@
 }
 
 #tabla{
-    margin-left: 5em;
+    margin-left: 3em;
     margin-bottom: 5em;
-    min-width: 50%;
+    max-width: 70%;
 }
 table{
     border: #68788C solid 2px;
     margin-top: 2em;
+    margin-left: 2em;
 }
-
-
-​table tr {
-    border-bottom: 1px solid black;
-}​
-
-table tr:last-child { 
-    border-bottom: none; 
-}
-
-
-
-
 
 table tr:hover{
     background-color: #F2EEB3;
@@ -70,6 +65,10 @@ table tr th {
     margin-top: 1px;
 }
 
+#input_campo_filtrar{
+    width: 380px;
+}
+
 #indice, #detalle{
     background-color: #3f3d56;
     color: #FFC700;
@@ -79,6 +78,16 @@ table tr th {
 #filtros{
     margin-top: 1em;
     margin-left: 5em;
+}
+
+#filtros > form , #filtros > .cancelar_filtro{
+        margin: 0%;
+        padding: 0%;
+}
+
+.cancelar_filtro > img, .cancelar_filtro > p{
+    margin: 0%;
+    padding: 0%;
 }
 
 #ordenar{
@@ -98,9 +107,6 @@ table tr th {
     cursor: pointer;
 }
 
-#mostrar_mas:hover{
-    cursor: pointer;
-}
 
 .imagen__mostrar-mas{
     cursor: pointer;
@@ -115,7 +121,7 @@ table tr th {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    height: 50%;
+
 }
 
 #mas__informacion P{
@@ -127,6 +133,7 @@ table tr th {
     justify-content: right;
     align-items: center;
     margin-left: 10px;
+    padding: 0.4em;
 }
 .span_item{
     color: #FFC700;
@@ -141,7 +148,7 @@ table tr th {
     top: 120px;
     background-color: #3f3d56;
     color: #F2EEB3;
-    border-radius: 2%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .cambiarColorFila{
@@ -154,4 +161,44 @@ table tr th {
 
 #boton_realiazar_transferencia{
     cursor: pointer;
+}
+
+
+footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #3f3d56;
+    text-align: justify;
+    padding-left: 1em;
+    padding-right: 1em; 
+    font-size: 9px;
+    
+  }
+
+  footer p {
+        margin: 3px;
+        color: whitesmoke;
+  }
+
+  #contenedor_mostrar_mas{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 10px;    
+  }
+
+  #mostrar_mas{
+    color: #FFC700;
+    background-color: #3f3d56;
+    padding: 4px;
+    border-radius: 5px;
+  }
+
+  #mostrar_mas:hover{
+    cursor: pointer;
+    background-color: #68788C;
 }

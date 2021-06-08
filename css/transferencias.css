@@ -13,7 +13,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2em;
+    margin-top: 3em;
 }
 #contenedor_imagen{
     display: flex;
@@ -29,17 +29,17 @@
 #contenedor__formulario{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    min-width: 50%;
 }
 
 #contenedor__formulario form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 120px;
+    /* justify-content: center; */
     border: #333 dotted 1px;
-    padding: 1em;   
+    padding: 1em;
+    width: 50%;
 }
 
 #contenedor__boton{
@@ -51,14 +51,13 @@
 .campo_formulario{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: flex-start;
     margin-bottom: 1em;
     width: 50%;
 }
 
 #contenedor__formulario form input{
-    width: 300PX;
+    width: 95%;
 }
 
 #contenedor__boton {
@@ -83,12 +82,13 @@
 .campo_formulario{
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: flex-end;
     align-items: flex-start;
+    width: 100%;
 }
 
 .campo_formulario > i , #faltan_completar_campos{
-    width: 300px;
+    
     color: #8b0000;
     margin: 0%;
     padding: 0%;
@@ -96,12 +96,24 @@
 }
 
 #faltan_campos{
-
     display: flex;
     justify-content: right;
 }
 
+#exito{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: right; */
+    min-width: 50%;
+}
+
 #transaccion_completada{
-    color:whitesmoke;
-    background: #008000;
+    margin-top: 2em;
+    color:008000;
+    border: #008000 solid 1px;
+    border-radius: 10px;
+    padding: 0.4em;
+    width: 22em;
+    text-align: center;
+    
 }

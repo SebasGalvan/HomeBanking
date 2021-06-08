@@ -38,9 +38,6 @@
     margin-left: 3px;
 }
 
-
-
-
 #id_imagen_tarjetas{
     max-width: 650px;
     max-height: 500px;
@@ -52,4 +49,25 @@
 
 .Mastercard{
     background: linear-gradient(#e21829, #f79813);
+}
+
+.contenedor_logos{
+    font-family: 'Hind Siliguri', sans-serif;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: center;
+}
+
+.logo__tarjeta{
+    margin-left: 10px;
+    width: 20%;
+    height: 10%;
+}
+
+.logo__chip{
+    position: relative;
+    width: 100px;
+    width: 10%;
+    height: 5%;
 }
