@@ -43,7 +43,7 @@ p{
 }
 
 #tabla{
-    margin-left: 3em;
+    margin-left: 2em;
     margin-bottom: 5em;
     max-width: 70%;
 }
@@ -100,7 +100,18 @@ table tr th {
 #td_detalle{
     display: flex;
     justify-content: center;
+    align-content: center;
     align-items: center;
+}
+
+.descripcion{
+    width: 300px;
+}
+#fecha__th{
+
+}
+.fecha{
+    width: 20px;
 }
 
 #imagen_ver_detalle:hover{
@@ -201,4 +212,10 @@ footer {
   #mostrar_mas:hover{
     cursor: pointer;
     background-color: #68788C;
+}
+
+
+.linea_tabla{
+    color: #3f3d56;
+
 }

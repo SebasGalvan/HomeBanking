@@ -40,11 +40,11 @@
           "id": 1,
           "fecha": "20/05/2021",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
+          "descripcion": "Pasaje El rosarino - Cordoba 23nmd 6/8",
+          "debito": "1500,00", 
           "credito": "0,00",
           "comprobante":"77589632",
-          "saldo parcial": "1000,00"
+          "saldo parcial": "9000,00"
         },
         {
           "id": 2,
@@ -100,11 +100,11 @@
           "id": 7,
           "fecha": "14/07/2012",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
+          "descripcion": "Super Libertad 7384593/& ",
+          "debito": "3400,00", 
           "credito": "0,00",
           "comprobante":"78563269",
-          "saldo parcial": "1000,00"
+          "saldo parcial": "16000,00"
         },
         {
           "id": 8,
@@ -120,11 +120,11 @@
           "id": 9,
           "fecha": "17/03/2017",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
+          "descripcion": "Alquiler Auto 324 F-45343 15:32:45:123",
+          "debito": "5000,00", 
           "credito": "0,00",
           "comprobante":"65984512",
-          "saldo parcial": "1000,00"
+          "saldo parcial": "4856,00"
         },
         {
           "id": 10,
@@ -160,11 +160,11 @@
           "id": 13,
           "fecha": "09/06/2012",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
+          "descripcion": "La Rueda Rest-Bar 234934 3/06 MD",
+          "debito": "3542,12", 
           "credito": "0,00",
           "comprobante":"13265985",
-          "saldo parcial": "1000,00"
+          "saldo parcial": "7800,00"
         },
         {
           "id": 14,
@@ -280,11 +280,11 @@
           "id": 25,
           "fecha": "12/07/2014",
           "titulo": "Deb. Autom. De Serv.",
-          "descripcion": "Afip - Monotribut Monotr05/21 20220222272",
-          "debito": "100,00", 
+          "descripcion": "GYM Cuota 12/7 M24234",
+          "debito": "900,00", 
           "credito": "0,00",
           "comprobante":"23659865", 
-          "saldo parcial": "1000,00"
+          "saldo parcial": "5100,00"
         },
         {
           "id": 26,

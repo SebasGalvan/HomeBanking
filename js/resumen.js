@@ -27,6 +27,7 @@ class UIResumen{
     id.textContent="ID"
     const th1 = document.createElement('th')
     th1.textContent="Fecha";
+    th1.id="fecha__th"
     const imagenFecha =  document.createElement('img')
     imagenFecha.id ="ordenar"
     imagenFecha.src= "../iconos/ordenar.png"
@@ -69,12 +70,11 @@ class UIResumen{
 
         row.innerHTML = `
                 <td>${i+1}</td>
-                <td>${fecha}</td>
-                <td>${lista[i].descripcion}</td>  
+                <td class="fecha">${fecha}</td>
+                <td class="descripcion">${lista[i].descripcion}</td>
             `;
         row.appendChild(td_detalle);
-        tabla.appendChild(row);
-
+        tabla.appendChild(row)
         i++;
       
       }
