@@ -70,8 +70,9 @@ function cerrarSesionMovimientos() {
 }
 
 function verificarNombre() {
+  let nombre = inputNombre.value
   const errorCampoObligatorio = document.querySelector("#campo_obligatorio_nombre")
-  if (this.value == "") {
+  if (nombre == "") {
     errorCampoObligatorio.hidden = false;
     setInterval(() => {
       errorCampoObligatorio.hidden = true;
@@ -83,8 +84,9 @@ function verificarNombre() {
 }
 
 function verificarApellido() {
+  let apellido = inputApellido.value
   const errorCampoObligatorio = document.querySelector("#campo_obligatorio_apellido")
-  if (this.value == "") {
+  if (apellido == "") {
     errorCampoObligatorio.hidden = false;
     setInterval(() => {
       errorCampoObligatorio.hidden = true;
@@ -96,8 +98,9 @@ function verificarApellido() {
 }
 
 function verificarDni() {
+  let dni =  inputDni.value;
   const errorCampoObligatorio = document.querySelector("#campo_obligatorio_dni")
-  if (this.value == "") {
+  if (dni == "") {
     errorCampoObligatorio.hidden = false;
     setInterval(() => {
       errorCampoObligatorio.hidden = true;
@@ -109,8 +112,10 @@ function verificarDni() {
 }
 
 function verificarNroCuenta() {
+
+  let cuenta = inputCbu.value
   const errorCampoObligatorio = document.querySelector("#campo_obligatorio_nro-cuenta")
-  if (this.value == "") {
+  if (cuenta == "") {
     errorCampoObligatorio.hidden = false;
     setInterval(() => {
       errorCampoObligatorio.hidden = true;
