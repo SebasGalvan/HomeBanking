@@ -176,8 +176,8 @@ function cargarTransferencia(objTransferencia){
       exito.hidden = true;
     }, 7000);
 
-    const formulario = document.querySelector("#formulario__transferencia");
-    formulario.reset();
+    limpiarFormulario()
+    
 
 }
 
@@ -195,4 +195,8 @@ function obtenerIndice(){
             })
 
 
+}
+
+function limpiarFormulario(){
+  const formulario = document.querySelector("#formulario__transferencia");
 }

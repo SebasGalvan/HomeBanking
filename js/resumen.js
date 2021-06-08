@@ -102,10 +102,10 @@ class UIResumen{
     for (const t in registro) {
 
       const contenedor =  document.createElement("div");
-      contenedor.classList="div_info_items"
+      contenedor.classList="info_items"
       const span = document.createElement('span');
-      span.classList = t + "__span"
-      span.textContent = t.toUpperCase() +" : "
+      span.classList = "span_item"
+      span.textContent = t.toUpperCase() +": "
       const p = document.createElement('p');
       p.textContent = `${registro[t]}`
       contenedor.appendChild(span);
