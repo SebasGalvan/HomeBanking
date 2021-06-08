@@ -1,26 +1,55 @@
 #contenedor{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
+    justify-content: center;
     align-items: center;
+    margin-left: 30px;
 }
-
-
-
-.tarjeta_div{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+#contenedor_imagen{
+    margin-right: 20px;
 }
 
 .tarjeta{
-    margin: 0%;
-    padding: 0%;
-    border: #333 dotted 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20em;
+  padding: 30px;
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+
+.item__tarjeta{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.2em;
+    width: 300px ;
+
+}
+.etiqueta_item{
+    padding: 0%;
+    margin: 0%;
+}
+.valor_item{
+    padding: 0%;
+    margin: 0%;
+    margin-left: 3px;
+}
+
+
+
 
 #id_imagen_tarjetas{
     max-width: 650px;
     max-height: 500px;
+}
+
+.Visa{
+    background: linear-gradient(#023e75, #60aae9);
+}
+
+.Mastercard{
+    background: linear-gradient(#e21829, #f79813);
 }

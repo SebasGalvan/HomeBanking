@@ -44,11 +44,25 @@ table{
     border: #68788C solid 2px;
     margin-top: 2em;
 }
+
+
+​table tr {
+    border-bottom: 1px solid black;
+}​
+
+table tr:last-child { 
+    border-bottom: none; 
+}
+
+
+
+
+
 table tr:hover{
     background-color: #F2EEB3;
 }
 table tr th {
-    background-color: #333;
+    background-color: #3f3d56;
     color: #FFC700;
     width: 200px;
 }
@@ -57,7 +71,7 @@ table tr th {
 }
 
 #indice, #detalle{
-    background-color: #333;
+    background-color: #3f3d56;
     color: #FFC700;
     width: 50px;
 }
@@ -104,26 +118,29 @@ table tr th {
     height: 50%;
 }
 
-#mas__informacion span{
-    color: #333;
-    margin-left: 5px;
-}
 #mas__informacion P{
     margin-left: 3px;
 }
-.div_info_items{
+.info_items{
     display: flex;
     flex-direction: row;
     justify-content: right;
     align-items: center;
+    margin-left: 10px;
 }
+.span_item{
+    color: #FFC700;
+    text-decoration: underline;
+}
+
 .div__informacion{
     position: fixed;
     max-width: 30%;
     min-width: 40%;
     right: 100px;
     top: 120px;
-    border: #333 dotted 2px;
+    background-color: #3f3d56;
+    color: #F2EEB3;
     border-radius: 2%;
 }
 

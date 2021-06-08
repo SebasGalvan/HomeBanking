@@ -7,26 +7,18 @@
 .color-principal { color: #FFC700;}
 /*___________________________________________________________________*/
 
-
 #contenedor{
     display: flex;
     flex-direction: column;
-    background-color: #979DA6;
 }
-
 #contenido{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
-    height: 590px;
-}
-
-#contenido #infoPersonal{
-    width: 40%;
-    padding: 0%;
-    margin: 0%;
+    align-content: center;
+    margin-top: 60px; 
+ 
 }
 
 #imagen__contenido{
@@ -42,7 +34,21 @@ footer{
     position: fixed;
     bottom: 0;
     background: #333;
-    width: 90%;
+    width: 100%;
     text-align: justify;
     font-size: 9px;
+    color: #f5f5f5;
+}
+#infoPersonal{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    padding: 1em;
+    background: #3f3d56;
+    border-radius: 5%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin-right: 2em;
+    width: 25em;
+    color: #FFF;
 }

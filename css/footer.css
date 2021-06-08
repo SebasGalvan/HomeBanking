@@ -1,0 +1,20 @@
+footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background: #3f3d56;
+    width: 99%;
+    text-align: justify;
+    padding-left: 1em;
+    padding-right: 1em; 
+    font-size: 9px;
+  }
+
+  footer p {
+        margin: 3px;
+        color: whitesmoke;
+  }

@@ -1,5 +1,5 @@
 nav{
-    background-color: #333;
+    background-color: #3f3d56;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -47,7 +47,7 @@ nav #contenedor__info-user{
     
     display: flex;
     flex-direction: row;
-    margin-right: 10px;
+    margin-right: 20px;
 
 }
 
@@ -75,4 +75,29 @@ nav #contenedor__info-user{
 
 #imagen_cerrar_sesion:hover{
     cursor: pointer;
+    background-image: url('../iconos/cerrar_sesion_claro.png');
+}
+
+
+.contenedor_item_datos{
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0%;
+}
+
+.etiqueta_datos{
+    color: #FFC700;
+    font-size: 0.8em;
+    margin: 0%;
+    padding: 0%;
+}
+
+.valor_datos{
+    margin: 0%;
+    padding: 0%
+}
+
+#contenedor_datos_usuarios{
+    margin-left: 10px;
 }
